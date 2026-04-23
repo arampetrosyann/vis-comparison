@@ -1,0 +1,6 @@
+[submodule "vendor/AutoViz"]
+	path = vendor/AutoViz
+	url = https://github.com/AutoViML/AutoViz.git
+[submodule "vendor/DeepEye"]
+	path = vendor/DeepEye
+	url = https://github.com/Thanksyy/DeepEye-APIs.git
