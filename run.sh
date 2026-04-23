@@ -15,5 +15,10 @@ if [ ! -d vendor/DeepEye/.git ]; then
 	git clone https://github.com/Thanksyy/DeepEye-APIs.git vendor/DeepEye
 fi
 
+# KG4Vis
+if [ ! -d vendor/KG4Vis/.git ]; then
+	git clone https://github.com/KG4VIS/Knowledge-Graph-4-VIS-Recommendation.git vendor/KG4Vis
+fi
+
 # run main script
 python -m main
