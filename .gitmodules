@@ -4,6 +4,3 @@
 [submodule "vendor/DeepEye"]
 	path = vendor/DeepEye
 	url = https://github.com/Thanksyy/DeepEye-APIs.git
-[submodule "vendor/KG4Vis"]
-	path = vendor/KG4Vis
-	url = https://github.com/KG4VIS/Knowledge-Graph-4-VIS-Recommendation.git
