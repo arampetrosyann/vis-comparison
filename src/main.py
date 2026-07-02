@@ -16,14 +16,19 @@ def _load_lux():
     from tools.lux import run_lux
     return run_lux
 
+def _load_lida():
+    from tools.lida import run_lida
+    return run_lida
+
 TOOL_LOADERS = {
     "autoviz": _load_autoviz,
     "draco": _load_draco,
     "deepeye": _load_deepeye,
     "lux": _load_lux,
+    "lida": _load_lida,
 }
 
-TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux"]
+TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida"]
 
 def _run_tool(tool_name: str) -> bool:
     print(f"Running {tool_name.capitalize()}...\n")
@@ -33,7 +38,8 @@ def _run_tool(tool_name: str) -> bool:
         run_tool()
 
         return True
-    except:
+    except Exception as e:
+        print(f"{tool_name.capitalize()} failed - {e}\n")
         return False
 
 
@@ -63,4 +69,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
