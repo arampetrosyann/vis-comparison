@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # pyenv should be installed and available
 #
 # pyenv install 3.7.9
@@ -9,4 +11,6 @@ python3 -m venv .venv
 
 source .venv/bin/activate
 
-pip install -r "requirements_$1.txt"
+python -m pip install --upgrade pip
+
+python -m pip install -r "requirements_$1.txt"

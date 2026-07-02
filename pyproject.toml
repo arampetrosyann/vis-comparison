@@ -7,19 +7,7 @@ name = "vis-comparison"
 version = "0.1.0"
 description = "Visualization Systems Comparison"
 readme = "README.md"
-requires-python = ">3.10"
-dependencies = [
-  "regex",
-  "pandas<3",
-  "numpy",
-  "matplotlib",
-  "seaborn",
-  "lux-api",
-  "vl-convert-python",
-  "ipython==7.23.1",
-  "pyecharts==1.3.1",
-  "setuptools>=68,<81"
-]
+dependencies = []
 
 [project.optional-dependencies]
 dev = []

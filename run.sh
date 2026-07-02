@@ -16,4 +16,4 @@ if [ ! -d vendor/DeepEye/.git ]; then
 fi
 
 # run main script
-python -m main
+python -m main "$@"
