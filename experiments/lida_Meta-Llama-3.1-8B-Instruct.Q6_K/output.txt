@@ -1,0 +1,52 @@
+Obtaining file:///root/vis-comparison
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: vis-comparison
+  Building editable for vis-comparison (pyproject.toml): started
+  Building editable for vis-comparison (pyproject.toml): finished with status 'done'
+  Created wheel for vis-comparison: filename=vis_comparison-0.1.0-0.editable-py3-none-any.whl size=2629 sha256=b5819cf90769596fbd949a40dd689ca91c4dcb2f50e2b1768c604b30fb8ce06b
+  Stored in directory: /tmp/pip-ephem-wheel-cache-xs9wcg7c/wheels/70/3b/a2/0e64470a4ecd138a2d36fda480b58a6e0e0e5d8e339d807a8d
+Successfully built vis-comparison
+Installing collected packages: vis-comparison
+  Attempting uninstall: vis-comparison
+    Found existing installation: vis-comparison 0.1.0
+    Uninstalling vis-comparison-0.1.0:
+      Successfully uninstalled vis-comparison-0.1.0
+Successfully installed vis-comparison-0.1.0
+Starting!!!
+
+Running Lida...
+
+Running LIDA for src/data/comparison-all-DPA.csv...
+
+Error decoding JSON: [
+    { "index": 0,  "question": "How does the RX-RATE-PPS vary across different build types?", "visualization": "bar chart of y_RX-RATE-PPS by build", "rationale": "This visualization will help us understand how different build types affect the RX-RATE-PPS, which is a key metric in the dataset. By comparing the values across different build types, we can identify which build type performs best in terms of RX-RATE-PPS." },
+    { "index": 1,  "question": "What is the relationship between SIZE and NTHREADS?", "visualization": "scatter plot of SIZE vs NTHREADS", "rationale": "This visualization will help us understand how SIZE and NTHREADS are related. By analyzing the scatter plot, we can identify any patterns or correlations between these two variables, which can inform our understanding of how to optimize the performance of the system." },
+    { "index": 2,  "question": "How does the LOSE-RATE change with different values of RX-RATE-PPS?", "visualization": "line plot of y_LOSE-RATE by y_RX-RATE-PPS", "rationale": "This visualization will help us understand how the LOSE-RATE changes as the RX-RATE-PPS increases. By analyzing the line plot, we can identify any trends or patterns in the data, which can inform our understanding of how to optimize the performance of the system." }
+]<|eot_id|>
+LIDA error processing comparison-all-DPA.csv - The model did not return a valid JSON object while attempting generate goals. Consider using a larger model or a model with higher max token length.
+
+Running LIDA for src/data/iplookup-cpu.csv...
+
+Error decoding JSON: [
+    { "index": 0,  "question": "What is the relationship between RX-RATE-PPS and RX-RATE-MBPS?", "visualization": "scatter plot of RX-RATE-PPS vs RX-RATE-MBPS", "rationale": "This will help us understand how these two metrics are correlated, which is important for understanding the performance of the system." },
+    { "index": 1,  "question": "How does the average latency (AVG-LAT) change with the number of threads (NTHREADS)?", "visualization": "line plot of AVG-LAT vs NTHREADS", "rationale": "This will help us understand how the system's performance changes with the number of threads, which is important for optimizing the system's configuration." },
+    { "index": 2,  "question": "What is the distribution of RX-GOODPUT-GBPS-PKTGEN across different sizes (SIZE) and number of threads (NTHREADS)?", "visualization": "heatmap of RX-GOODPUT-GBPS-PKTGEN vs SIZE and NTHREADS", "rationale": "This will help us understand how the system's performance changes with different configurations, which is important for optimizing the system's performance." }
+]<|eot_id|>
+LIDA error processing iplookup-cpu.csv - The model did not return a valid JSON object while attempting generate goals. Consider using a larger model or a model with higher max token length.
+
+Running LIDA for src/data/scalability-energy-crc-TIME.csv...
+
+Error decoding JSON: [
+    { "index": 0,  "question": "What is the distribution of CPUFREQ across different build types?", "visualization": "bar chart of CPUFREQ by build", "rationale": "This tells us about the relationship between CPUFREQ and build types, which is crucial for understanding the impact of build configurations on performance." },
+    { "index": 1,  "question": "How does the power consumption of the GPU, IPMI, RAPL, and PDU vary across different UNCORE_PSTATE settings?", "visualization": "line chart of power consumption by UNCORE_PSTATE", "rationale": "This helps us understand the relationship between UNCORE_PSTATE and power consumption, which is essential for optimizing system performance and energy efficiency." },
+    { "index": 2,  "question": "What is the correlation between TIME and RATE across different NTHREADS settings?", "visualization": "scatter plot of TIME vs RATE by NTHREADS", "rationale": "This reveals the relationship between TIME and RATE, which is critical for understanding the impact of NTHREADS on system performance and identifying potential bottlenecks." }
+]<|eot_id|>
+LIDA error processing scalability-energy-crc-TIME.csv - The model did not return a valid JSON object while attempting generate goals. Consider using a larger model or a model with higher max token length.
+

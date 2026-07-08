@@ -1,0 +1,489 @@
+import_cuda_impl: initializing gpu module...
+get_rocm_bin_path: note: hipcc not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/hipcc does not exist
+get_rocm_bin_path: note: /opt/rocm/bin/hipcc does not exist
+link_cuda_dso: note: dynamically linking /root/.llamafile/v/0.9.2/ggml-rocm.so
+link_cuda_dso: warning: libamdhip64.so.6: cannot open shared object file: No such file or directory: failed to load library
+link_cuda_dso: note: dynamically linking /root/.llamafile/v/0.9.2/ggml-rocm.so
+link_cuda_dso: warning: libamdhip64.so.6: cannot open shared object file: No such file or directory: failed to load library
+get_nvcc_path: note: nvcc not found on $PATH
+get_nvcc_path: note: $CUDA_PATH/bin/nvcc does not exist
+get_nvcc_path: note: /opt/cuda/bin/nvcc does not exist
+get_nvcc_path: note: /usr/local/cuda/bin/nvcc does not exist
+link_cuda_dso: note: dynamically linking /root/.llamafile/v/0.9.2/ggml-cuda.so
+ggml_cuda_link: CUDA kernel version 13.0
+ggml_cuda_link: CUDA runtime version is 12.8
+ggml_cuda_link: welcome to CUDA SDK with tinyBLAS
+link_cuda_dso: GPU support loaded
+{"build":1500,"commit":"a30b324","function":"server_cli","level":"INFO","line":2911,"msg":"build info","tid":"12964064","timestamp":1783534387}
+{"function":"server_cli","level":"INFO","line":2918,"msg":"system info","n_threads":4,"n_threads_batch":4,"system_info":"AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 1 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | ","tid":"12964064","timestamp":1783534387,"total_threads":4}
+llama_model_loader: loaded meta data with 40 key-value pairs and 362 tensors from granite-3.2-8b-instruct-Q4_K_M.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = granite
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Granite 3.2 8b Instruct
+llama_model_loader: - kv   3:                           general.finetune str              = instruct
+llama_model_loader: - kv   4:                           general.basename str              = granite-3.2
+llama_model_loader: - kv   5:                         general.size_label str              = 8B
+llama_model_loader: - kv   6:                            general.license str              = apache-2.0
+llama_model_loader: - kv   7:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   8:                  general.base_model.0.name str              = Granite 3.1 8b Instruct
+llama_model_loader: - kv   9:          general.base_model.0.organization str              = Ibm Granite
+llama_model_loader: - kv  10:              general.base_model.0.repo_url str              = https://huggingface.co/ibm-granite/gr...
+llama_model_loader: - kv  11:                               general.tags arr[str,3]       = ["language", "granite-3.2", "text-gen...
+llama_model_loader: - kv  12:                        granite.block_count u32              = 40
+llama_model_loader: - kv  13:                     granite.context_length u32              = 131072
+llama_model_loader: - kv  14:                   granite.embedding_length u32              = 4096
+llama_model_loader: - kv  15:                granite.feed_forward_length u32              = 12800
+llama_model_loader: - kv  16:               granite.attention.head_count u32              = 32
+llama_model_loader: - kv  17:            granite.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  18:                     granite.rope.freq_base f32              = 10000000.000000
+llama_model_loader: - kv  19:   granite.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  20:                         granite.vocab_size u32              = 49155
+llama_model_loader: - kv  21:               granite.rope.dimension_count u32              = 128
+llama_model_loader: - kv  22:                    granite.attention.scale f32              = 0.007812
+llama_model_loader: - kv  23:                    granite.embedding_scale f32              = 12.000000
+llama_model_loader: - kv  24:                     granite.residual_scale f32              = 0.220000
+llama_model_loader: - kv  25:                        granite.logit_scale f32              = 16.000000
+llama_model_loader: - kv  26:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  27:                         tokenizer.ggml.pre str              = refact
+llama_model_loader: - kv  28:                      tokenizer.ggml.tokens arr[str,49155]   = ["<|end_of_text|>", "<fim_prefix>", "...
+llama_model_loader: - kv  29:                  tokenizer.ggml.token_type arr[i32,49155]   = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  30:                      tokenizer.ggml.merges arr[str,48891]   = ["Ġ Ġ", "ĠĠ ĠĠ", "ĠĠĠĠ ĠĠ...
+llama_model_loader: - kv  31:                tokenizer.ggml.bos_token_id u32              = 0
+llama_model_loader: - kv  32:                tokenizer.ggml.eos_token_id u32              = 0
+llama_model_loader: - kv  33:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  34:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  35:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  36:                    tokenizer.chat_template str              = {%- if messages[0]['role'] == 'system...
+llama_model_loader: - kv  37:            tokenizer.ggml.add_space_prefix bool             = false
+llama_model_loader: - kv  38:               general.quantization_version u32              = 2
+llama_model_loader: - kv  39:                          general.file_type u32              = 15
+llama_model_loader: - type  f32:   81 tensors
+llama_model_loader: - type q4_K:  240 tensors
+llama_model_loader: - type q6_K:   41 tensors
+llm_load_vocab: special tokens cache size = 22
+llm_load_vocab: token to piece cache size = 0.2826 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = granite
+llm_load_print_meta: vocab type       = BPE
+llm_load_print_meta: n_vocab          = 49155
+llm_load_print_meta: n_merges         = 48891
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 131072
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_layer          = 40
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 1.6e+01
+llm_load_print_meta: n_ff             = 12800
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 10000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 131072
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: model type       = 3B
+llm_load_print_meta: model ftype      = Q4_K - Medium
+llm_load_print_meta: model params     = 8.17 B
+llm_load_print_meta: model size       = 4.60 GiB (4.84 BPW) 
+llm_load_print_meta: general.name     = Granite 3.2 8b Instruct
+llm_load_print_meta: BOS token        = 0 '<|end_of_text|>'
+llm_load_print_meta: EOS token        = 0 '<|end_of_text|>'
+llm_load_print_meta: UNK token        = 0 '<|end_of_text|>'
+llm_load_print_meta: PAD token        = 0 '<|end_of_text|>'
+llm_load_print_meta: LF token         = 145 'Ä'
+llm_load_print_meta: max token length = 512
+llm_load_print_meta: f_embedding_scale = 12.000000
+llm_load_print_meta: f_residual_scale  = 0.220000
+llm_load_print_meta: f_attention_scale = 0.007812
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device %d: %s, compute capability %d.%d, VMM: %s
+llm_load_tensors: ggml ctx size =    0.40 MiB
+llm_load_tensors: offloading 40 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 41/41 layers to GPU
+llm_load_tensors:        CPU buffer size =   157.51 MiB
+llm_load_tensors:      CUDA0 buffer size =  4712.21 MiB
+................................................................................................
+llama_new_context_with_model: n_ctx      = 8000
+llama_new_context_with_model: n_batch    = 2048
+llama_new_context_with_model: n_ubatch   = 512
+llama_new_context_with_model: flash_attn = 0
+llama_new_context_with_model: freq_base  = 10000000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:      CUDA0 KV buffer size =  1250.00 MiB
+llama_new_context_with_model: KV self size  = 1250.00 MiB, K (f16):  625.00 MiB, V (f16):  625.00 MiB
+llama_new_context_with_model:  CUDA_Host  output buffer size =     0.19 MiB
+llama_new_context_with_model:      CUDA0 compute buffer size =   547.63 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    23.63 MiB
+llama_new_context_with_model: graph nodes  = 1368
+llama_new_context_with_model: graph splits = 2
+{"function":"initialize","level":"INFO","line":502,"msg":"initializing slots","n_slots":1,"tid":"12964064","timestamp":1783534388}
+{"function":"initialize","level":"INFO","line":514,"msg":"new slot","n_ctx_slot":8000,"slot_id":0,"tid":"12964064","timestamp":1783534388}
+{"function":"server_cli","level":"INFO","line":3131,"msg":"model loaded","tid":"12964064","timestamp":1783534388}
+
+llama server listening at http://127.0.0.1:8000
+
+opening browser tab... (pass --nobrowser to disable)
+{"function":"server_cli","hostname":"0.0.0.0","level":"INFO","line":3269,"msg":"HTTP server listening","port":"8000","tid":"12964064","timestamp":1783534388,"url_prefix":""}
+{"function":"update_slots","level":"INFO","line":1672,"msg":"all slots are idle and system prompt is empty, clear the KV cache","tid":"12964064","timestamp":1783534388}
+failed to open http://127.0.0.1:8000/ in a browser tab using xdg-open: No such file or directory
+{"function":"log_server_request","level":"INFO","line":2842,"method":"GET","msg":"request","params":{},"path":"/v1/models","remote_addr":"127.0.0.1","remote_port":47700,"status":200,"tid":"137608594705152","timestamp":1783534389}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":0,"tid":"12964064","timestamp":1783534406}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":0,"tid":"12964064","timestamp":1783534406}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     520.72 ms /  1655 tokens (    0.31 ms per token,  3178.31 tokens per second)","n_tokens_second":3178.309907300895,"num_prompt_tokens_processed":1655,"slot_id":0,"t_prompt_processing":520.717,"t_token":0.3146326283987915,"task_id":0,"tid":"12964064","timestamp":1783534417}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   10304.18 ms /   301 runs   (   34.23 ms per token,    29.21 tokens per second)","n_decoded":301,"n_tokens_second":29.211449063530438,"slot_id":0,"t_token":34.233152823920264,"t_token_generation":10304.179,"task_id":0,"tid":"12964064","timestamp":1783534417}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   10824.90 ms","slot_id":0,"t_prompt_processing":520.717,"t_token_generation":10304.179,"t_total":10824.896,"task_id":0,"tid":"12964064","timestamp":1783534417}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1956,"n_ctx":8000,"n_past":1955,"n_system_tokens":0,"slot_id":0,"task_id":0,"tid":"12964064","timestamp":1783534417,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":37210,"status":200,"tid":"137608594708000","timestamp":1783534417}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":303,"tid":"12964064","timestamp":1783534417}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":303,"tid":"12964064","timestamp":1783534417}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     764.18 ms /  2068 tokens (    0.37 ms per token,  2706.18 tokens per second)","n_tokens_second":2706.1793275641635,"num_prompt_tokens_processed":2068,"slot_id":0,"t_prompt_processing":764.177,"t_token":0.36952466150870406,"task_id":303,"tid":"12964064","timestamp":1783534423}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4614.86 ms /   120 runs   (   38.46 ms per token,    26.00 tokens per second)","n_decoded":120,"n_tokens_second":26.002950034681433,"slot_id":0,"t_token":38.457175,"t_token_generation":4614.861,"task_id":303,"tid":"12964064","timestamp":1783534423}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5379.04 ms","slot_id":0,"t_prompt_processing":764.177,"t_token_generation":4614.861,"t_total":5379.038,"task_id":303,"tid":"12964064","timestamp":1783534423}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2188,"n_ctx":8000,"n_past":2187,"n_system_tokens":0,"slot_id":0,"task_id":303,"tid":"12964064","timestamp":1783534423,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":37210,"status":200,"tid":"137608594708000","timestamp":1783534423}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":425,"tid":"12964064","timestamp":1783534424}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":425,"tid":"12964064","timestamp":1783534424}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     775.26 ms /  2093 tokens (    0.37 ms per token,  2699.75 tokens per second)","n_tokens_second":2699.7533717894476,"num_prompt_tokens_processed":2093,"slot_id":0,"t_prompt_processing":775.256,"t_token":0.370404204491161,"task_id":425,"tid":"12964064","timestamp":1783534431}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5768.37 ms /   148 runs   (   38.98 ms per token,    25.66 tokens per second)","n_decoded":148,"n_tokens_second":25.657148038103642,"slot_id":0,"t_token":38.97549324324324,"t_token_generation":5768.373,"task_id":425,"tid":"12964064","timestamp":1783534431}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6543.63 ms","slot_id":0,"t_prompt_processing":775.256,"t_token_generation":5768.373,"t_total":6543.629,"task_id":425,"tid":"12964064","timestamp":1783534431}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2241,"n_ctx":8000,"n_past":2240,"n_system_tokens":0,"slot_id":0,"task_id":425,"tid":"12964064","timestamp":1783534431,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":37210,"status":200,"tid":"137608594708000","timestamp":1783534431}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":575,"tid":"12964064","timestamp":1783534432}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":575,"tid":"12964064","timestamp":1783534432}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     770.42 ms /  2085 tokens (    0.37 ms per token,  2706.31 tokens per second)","n_tokens_second":2706.3125226337283,"num_prompt_tokens_processed":2085,"slot_id":0,"t_prompt_processing":770.421,"t_token":0.3695064748201439,"task_id":575,"tid":"12964064","timestamp":1783534438}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5078.47 ms /   131 runs   (   38.77 ms per token,    25.80 tokens per second)","n_decoded":131,"n_tokens_second":25.795185830684733,"slot_id":0,"t_token":38.76692366412213,"t_token_generation":5078.467,"task_id":575,"tid":"12964064","timestamp":1783534438}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5848.89 ms","slot_id":0,"t_prompt_processing":770.421,"t_token_generation":5078.467,"t_total":5848.888,"task_id":575,"tid":"12964064","timestamp":1783534438}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2216,"n_ctx":8000,"n_past":2215,"n_system_tokens":0,"slot_id":0,"task_id":575,"tid":"12964064","timestamp":1783534438,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":37210,"status":200,"tid":"137608594708000","timestamp":1783534438}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":708,"tid":"12964064","timestamp":1783534438}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":708,"tid":"12964064","timestamp":1783534438}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     387.64 ms /  1402 tokens (    0.28 ms per token,  3616.75 tokens per second)","n_tokens_second":3616.748486357222,"num_prompt_tokens_processed":1402,"slot_id":0,"t_prompt_processing":387.641,"t_token":0.2764914407988588,"task_id":708,"tid":"12964064","timestamp":1783534449}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   10214.53 ms /   333 runs   (   30.67 ms per token,    32.60 tokens per second)","n_decoded":333,"n_tokens_second":32.60060934748559,"slot_id":0,"t_token":30.674273273273272,"t_token_generation":10214.533,"task_id":708,"tid":"12964064","timestamp":1783534449}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   10602.17 ms","slot_id":0,"t_prompt_processing":387.641,"t_token_generation":10214.533,"t_total":10602.173999999999,"task_id":708,"tid":"12964064","timestamp":1783534449}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1735,"n_ctx":8000,"n_past":1734,"n_system_tokens":0,"slot_id":0,"task_id":708,"tid":"12964064","timestamp":1783534449,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":37210,"status":200,"tid":"137608594708000","timestamp":1783534449}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":1043,"tid":"12964064","timestamp":1783534449}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":1043,"tid":"12964064","timestamp":1783534449}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     584.82 ms /  1812 tokens (    0.32 ms per token,  3098.39 tokens per second)","n_tokens_second":3098.389247973735,"num_prompt_tokens_processed":1812,"slot_id":0,"t_prompt_processing":584.82,"t_token":0.322748344370861,"task_id":1043,"tid":"12964064","timestamp":1783534454}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4691.57 ms /   133 runs   (   35.27 ms per token,    28.35 tokens per second)","n_decoded":133,"n_tokens_second":28.348713043029722,"slot_id":0,"t_token":35.27496992481203,"t_token_generation":4691.571,"task_id":1043,"tid":"12964064","timestamp":1783534454}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5276.39 ms","slot_id":0,"t_prompt_processing":584.82,"t_token_generation":4691.571,"t_total":5276.391,"task_id":1043,"tid":"12964064","timestamp":1783534454}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1945,"n_ctx":8000,"n_past":1944,"n_system_tokens":0,"slot_id":0,"task_id":1043,"tid":"12964064","timestamp":1783534454,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":38120,"status":200,"tid":"137603182674880","timestamp":1783534454}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":1178,"tid":"12964064","timestamp":1783534454}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":1178,"tid":"12964064","timestamp":1783534454}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     595.84 ms /  1831 tokens (    0.33 ms per token,  3072.95 tokens per second)","n_tokens_second":3072.9519807197853,"num_prompt_tokens_processed":1831,"slot_id":0,"t_prompt_processing":595.844,"t_token":0.32541998907700714,"task_id":1178,"tid":"12964064","timestamp":1783534460}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5435.31 ms /   152 runs   (   35.76 ms per token,    27.97 tokens per second)","n_decoded":152,"n_tokens_second":27.965275958399445,"slot_id":0,"t_token":35.758631578947366,"t_token_generation":5435.312,"task_id":1178,"tid":"12964064","timestamp":1783534460}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6031.16 ms","slot_id":0,"t_prompt_processing":595.844,"t_token_generation":5435.312,"t_total":6031.156,"task_id":1178,"tid":"12964064","timestamp":1783534460}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1983,"n_ctx":8000,"n_past":1982,"n_system_tokens":0,"slot_id":0,"task_id":1178,"tid":"12964064","timestamp":1783534460,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":38120,"status":200,"tid":"137603182674880","timestamp":1783534460}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":1332,"tid":"12964064","timestamp":1783534460}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":1332,"tid":"12964064","timestamp":1783534460}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     596.50 ms /  1821 tokens (    0.33 ms per token,  3052.81 tokens per second)","n_tokens_second":3052.8131648167055,"num_prompt_tokens_processed":1821,"slot_id":0,"t_prompt_processing":596.499,"t_token":0.3275667215815486,"task_id":1332,"tid":"12964064","timestamp":1783534466}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4674.39 ms /   132 runs   (   35.41 ms per token,    28.24 tokens per second)","n_decoded":132,"n_tokens_second":28.238954611014815,"slot_id":0,"t_token":35.41207575757576,"t_token_generation":4674.394,"task_id":1332,"tid":"12964064","timestamp":1783534466}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5270.89 ms","slot_id":0,"t_prompt_processing":596.499,"t_token_generation":4674.394,"t_total":5270.893,"task_id":1332,"tid":"12964064","timestamp":1783534466}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1953,"n_ctx":8000,"n_past":1952,"n_system_tokens":0,"slot_id":0,"task_id":1332,"tid":"12964064","timestamp":1783534466,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":38120,"status":200,"tid":"137603182674880","timestamp":1783534466}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":1466,"tid":"12964064","timestamp":1783534466}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":1466,"tid":"12964064","timestamp":1783534466}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     528.82 ms /  1674 tokens (    0.32 ms per token,  3165.56 tokens per second)","n_tokens_second":3165.5623127893255,"num_prompt_tokens_processed":1674,"slot_id":0,"t_prompt_processing":528.816,"t_token":0.31589964157706096,"task_id":1466,"tid":"12964064","timestamp":1783534476}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    9919.53 ms /   288 runs   (   34.44 ms per token,    29.03 tokens per second)","n_decoded":288,"n_tokens_second":29.03362194232108,"slot_id":0,"t_token":34.44282638888889,"t_token_generation":9919.534,"task_id":1466,"tid":"12964064","timestamp":1783534476}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   10448.35 ms","slot_id":0,"t_prompt_processing":528.816,"t_token_generation":9919.534,"t_total":10448.35,"task_id":1466,"tid":"12964064","timestamp":1783534476}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1962,"n_ctx":8000,"n_past":1961,"n_system_tokens":0,"slot_id":0,"task_id":1466,"tid":"12964064","timestamp":1783534476,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":38120,"status":200,"tid":"137603182674880","timestamp":1783534476}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":1756,"tid":"12964064","timestamp":1783534476}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":1756,"tid":"12964064","timestamp":1783534476}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     775.75 ms /  2087 tokens (    0.37 ms per token,  2690.31 tokens per second)","n_tokens_second":2690.313582022982,"num_prompt_tokens_processed":2087,"slot_id":0,"t_prompt_processing":775.746,"t_token":0.3717038811691423,"task_id":1756,"tid":"12964064","timestamp":1783534482}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4641.70 ms /   120 runs   (   38.68 ms per token,    25.85 tokens per second)","n_decoded":120,"n_tokens_second":25.852619387396334,"slot_id":0,"t_token":38.6808,"t_token_generation":4641.696,"task_id":1756,"tid":"12964064","timestamp":1783534482}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5417.44 ms","slot_id":0,"t_prompt_processing":775.746,"t_token_generation":4641.696,"t_total":5417.442,"task_id":1756,"tid":"12964064","timestamp":1783534482}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2207,"n_ctx":8000,"n_past":2206,"n_system_tokens":0,"slot_id":0,"task_id":1756,"tid":"12964064","timestamp":1783534482,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":38120,"status":200,"tid":"137603182674880","timestamp":1783534482}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":1878,"tid":"12964064","timestamp":1783534533}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":1878,"tid":"12964064","timestamp":1783534533}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     783.95 ms /  2110 tokens (    0.37 ms per token,  2691.50 tokens per second)","n_tokens_second":2691.501615538766,"num_prompt_tokens_processed":2110,"slot_id":0,"t_prompt_processing":783.949,"t_token":0.3715398104265403,"task_id":1878,"tid":"12964064","timestamp":1783534539}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4915.61 ms /   126 runs   (   39.01 ms per token,    25.63 tokens per second)","n_decoded":126,"n_tokens_second":25.632648344883624,"slot_id":0,"t_token":39.01274603174603,"t_token_generation":4915.606,"task_id":1878,"tid":"12964064","timestamp":1783534539}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5699.55 ms","slot_id":0,"t_prompt_processing":783.949,"t_token_generation":4915.606,"t_total":5699.554999999999,"task_id":1878,"tid":"12964064","timestamp":1783534539}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2236,"n_ctx":8000,"n_past":2235,"n_system_tokens":0,"slot_id":0,"task_id":1878,"tid":"12964064","timestamp":1783534539,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41640,"status":200,"tid":"137608594708272","timestamp":1783534539}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":2006,"tid":"12964064","timestamp":1783534539}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":2006,"tid":"12964064","timestamp":1783534539}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     784.11 ms /  2112 tokens (    0.37 ms per token,  2693.51 tokens per second)","n_tokens_second":2693.5133770179036,"num_prompt_tokens_processed":2112,"slot_id":0,"t_prompt_processing":784.106,"t_token":0.37126231060606063,"task_id":2006,"tid":"12964064","timestamp":1783534545}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5279.93 ms /   135 runs   (   39.11 ms per token,    25.57 tokens per second)","n_decoded":135,"n_tokens_second":25.56851110961278,"slot_id":0,"t_token":39.11060740740741,"t_token_generation":5279.932,"task_id":2006,"tid":"12964064","timestamp":1783534545}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6064.04 ms","slot_id":0,"t_prompt_processing":784.106,"t_token_generation":5279.932,"t_total":6064.038,"task_id":2006,"tid":"12964064","timestamp":1783534545}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2247,"n_ctx":8000,"n_past":2246,"n_system_tokens":0,"slot_id":0,"task_id":2006,"tid":"12964064","timestamp":1783534545,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41640,"status":200,"tid":"137608594708272","timestamp":1783534545}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":2143,"tid":"12964064","timestamp":1783535872}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":2143,"tid":"12964064","timestamp":1783535872}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     516.43 ms /  1637 tokens (    0.32 ms per token,  3169.86 tokens per second)","n_tokens_second":3169.8575016410837,"num_prompt_tokens_processed":1637,"slot_id":0,"t_prompt_processing":516.427,"t_token":0.31547159437996336,"task_id":2143,"tid":"12964064","timestamp":1783535881}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    8696.09 ms /   259 runs   (   33.58 ms per token,    29.78 tokens per second)","n_decoded":259,"n_tokens_second":29.783514100481533,"slot_id":0,"t_token":33.57562162162162,"t_token_generation":8696.086,"task_id":2143,"tid":"12964064","timestamp":1783535881}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    9212.51 ms","slot_id":0,"t_prompt_processing":516.427,"t_token_generation":8696.086,"t_total":9212.512999999999,"task_id":2143,"tid":"12964064","timestamp":1783535881}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1896,"n_ctx":8000,"n_past":1895,"n_system_tokens":0,"slot_id":0,"task_id":2143,"tid":"12964064","timestamp":1783535881,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59106,"status":200,"tid":"137603180662288","timestamp":1783535881}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":2404,"tid":"12964064","timestamp":1783535881}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":2404,"tid":"12964064","timestamp":1783535881}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     719.67 ms /  2045 tokens (    0.35 ms per token,  2841.58 tokens per second)","n_tokens_second":2841.584117142742,"num_prompt_tokens_processed":2045,"slot_id":0,"t_prompt_processing":719.669,"t_token":0.3519163814180929,"task_id":2404,"tid":"12964064","timestamp":1783535886}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4348.47 ms /   114 runs   (   38.14 ms per token,    26.22 tokens per second)","n_decoded":114,"n_tokens_second":26.216093277779745,"slot_id":0,"t_token":38.14450877192983,"t_token_generation":4348.474,"task_id":2404,"tid":"12964064","timestamp":1783535886}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5068.14 ms","slot_id":0,"t_prompt_processing":719.669,"t_token_generation":4348.474,"t_total":5068.143,"task_id":2404,"tid":"12964064","timestamp":1783535886}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2159,"n_ctx":8000,"n_past":2158,"n_system_tokens":0,"slot_id":0,"task_id":2404,"tid":"12964064","timestamp":1783535886,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59106,"status":200,"tid":"137603180662288","timestamp":1783535886}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":2520,"tid":"12964064","timestamp":1783535887}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":2520,"tid":"12964064","timestamp":1783535887}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     775.09 ms /  2074 tokens (    0.37 ms per token,  2675.80 tokens per second)","n_tokens_second":2675.80448306915,"num_prompt_tokens_processed":2074,"slot_id":0,"t_prompt_processing":775.094,"t_token":0.37371938283510125,"task_id":2520,"tid":"12964064","timestamp":1783535892}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5060.35 ms /   131 runs   (   38.63 ms per token,    25.89 tokens per second)","n_decoded":131,"n_tokens_second":25.887516960275903,"slot_id":0,"t_token":38.62865648854962,"t_token_generation":5060.354,"task_id":2520,"tid":"12964064","timestamp":1783535892}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5835.45 ms","slot_id":0,"t_prompt_processing":775.094,"t_token_generation":5060.354,"t_total":5835.448,"task_id":2520,"tid":"12964064","timestamp":1783535892}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2205,"n_ctx":8000,"n_past":2204,"n_system_tokens":0,"slot_id":0,"task_id":2520,"tid":"12964064","timestamp":1783535892,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59106,"status":200,"tid":"137603180662288","timestamp":1783535892}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":2653,"tid":"12964064","timestamp":1783535892}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":2653,"tid":"12964064","timestamp":1783535892}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     776.12 ms /  2075 tokens (    0.37 ms per token,  2673.55 tokens per second)","n_tokens_second":2673.5453014535065,"num_prompt_tokens_processed":2075,"slot_id":0,"t_prompt_processing":776.123,"t_token":0.3740351807228916,"task_id":2653,"tid":"12964064","timestamp":1783535900}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    6338.10 ms /   163 runs   (   38.88 ms per token,    25.72 tokens per second)","n_decoded":163,"n_tokens_second":25.717466024939633,"slot_id":0,"t_token":38.884079754601224,"t_token_generation":6338.105,"task_id":2653,"tid":"12964064","timestamp":1783535900}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    7114.23 ms","slot_id":0,"t_prompt_processing":776.123,"t_token_generation":6338.105,"t_total":7114.227999999999,"task_id":2653,"tid":"12964064","timestamp":1783535900}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2238,"n_ctx":8000,"n_past":2237,"n_system_tokens":0,"slot_id":0,"task_id":2653,"tid":"12964064","timestamp":1783535900,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59106,"status":200,"tid":"137603180662288","timestamp":1783535900}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":2818,"tid":"12964064","timestamp":1783535900}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":2818,"tid":"12964064","timestamp":1783535900}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     391.80 ms /  1388 tokens (    0.28 ms per token,  3542.61 tokens per second)","n_tokens_second":3542.614745751032,"num_prompt_tokens_processed":1388,"slot_id":0,"t_prompt_processing":391.801,"t_token":0.2822773775216138,"task_id":2818,"tid":"12964064","timestamp":1783535908}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    7788.47 ms /   260 runs   (   29.96 ms per token,    33.38 tokens per second)","n_decoded":260,"n_tokens_second":33.38266263712249,"slot_id":0,"t_token":29.95566923076923,"t_token_generation":7788.474,"task_id":2818,"tid":"12964064","timestamp":1783535908}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    8180.28 ms","slot_id":0,"t_prompt_processing":391.801,"t_token_generation":7788.474,"t_total":8180.2750000000005,"task_id":2818,"tid":"12964064","timestamp":1783535908}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1648,"n_ctx":8000,"n_past":1647,"n_system_tokens":0,"slot_id":0,"task_id":2818,"tid":"12964064","timestamp":1783535908,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59106,"status":200,"tid":"137603180662288","timestamp":1783535908}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3080,"tid":"12964064","timestamp":1783535908}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3080,"tid":"12964064","timestamp":1783535908}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     587.38 ms /  1811 tokens (    0.32 ms per token,  3083.16 tokens per second)","n_tokens_second":3083.156703014207,"num_prompt_tokens_processed":1811,"slot_id":0,"t_prompt_processing":587.385,"t_token":0.324342904472667,"task_id":3080,"tid":"12964064","timestamp":1783535912}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    3562.35 ms /   102 runs   (   34.93 ms per token,    28.63 tokens per second)","n_decoded":102,"n_tokens_second":28.63276846308282,"slot_id":0,"t_token":34.92501960784313,"t_token_generation":3562.352,"task_id":3080,"tid":"12964064","timestamp":1783535912}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    4149.74 ms","slot_id":0,"t_prompt_processing":587.385,"t_token_generation":3562.352,"t_total":4149.737,"task_id":3080,"tid":"12964064","timestamp":1783535912}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1913,"n_ctx":8000,"n_past":1912,"n_system_tokens":0,"slot_id":0,"task_id":3080,"tid":"12964064","timestamp":1783535912,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41030,"status":200,"tid":"137603182680816","timestamp":1783535912}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3184,"tid":"12964064","timestamp":1783535912}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3184,"tid":"12964064","timestamp":1783535912}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     586.36 ms /  1809 tokens (    0.32 ms per token,  3085.15 tokens per second)","n_tokens_second":3085.1459347361174,"num_prompt_tokens_processed":1809,"slot_id":0,"t_prompt_processing":586.358,"t_token":0.3241337755666114,"task_id":3184,"tid":"12964064","timestamp":1783535917}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4503.11 ms /   128 runs   (   35.18 ms per token,    28.42 tokens per second)","n_decoded":128,"n_tokens_second":28.424787124992672,"slot_id":0,"t_token":35.1805625,"t_token_generation":4503.112,"task_id":3184,"tid":"12964064","timestamp":1783535917}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5089.47 ms","slot_id":0,"t_prompt_processing":586.358,"t_token_generation":4503.112,"t_total":5089.47,"task_id":3184,"tid":"12964064","timestamp":1783535917}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1937,"n_ctx":8000,"n_past":1936,"n_system_tokens":0,"slot_id":0,"task_id":3184,"tid":"12964064","timestamp":1783535917,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41030,"status":200,"tid":"137603182680816","timestamp":1783535917}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3314,"tid":"12964064","timestamp":1783535917}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3314,"tid":"12964064","timestamp":1783535917}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     589.34 ms /  1800 tokens (    0.33 ms per token,  3054.27 tokens per second)","n_tokens_second":3054.274457102715,"num_prompt_tokens_processed":1800,"slot_id":0,"t_prompt_processing":589.338,"t_token":0.32741,"task_id":3314,"tid":"12964064","timestamp":1783535923}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4811.16 ms /   137 runs   (   35.12 ms per token,    28.48 tokens per second)","n_decoded":137,"n_tokens_second":28.4754671379599,"slot_id":0,"t_token":35.117948905109486,"t_token_generation":4811.159,"task_id":3314,"tid":"12964064","timestamp":1783535923}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5400.50 ms","slot_id":0,"t_prompt_processing":589.338,"t_token_generation":4811.159,"t_total":5400.496999999999,"task_id":3314,"tid":"12964064","timestamp":1783535923}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1937,"n_ctx":8000,"n_past":1936,"n_system_tokens":0,"slot_id":0,"task_id":3314,"tid":"12964064","timestamp":1783535923,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41030,"status":200,"tid":"137603182680816","timestamp":1783535923}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3453,"tid":"12964064","timestamp":1783535923}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3453,"tid":"12964064","timestamp":1783535923}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     524.49 ms /  1652 tokens (    0.32 ms per token,  3149.75 tokens per second)","n_tokens_second":3149.7504223182314,"num_prompt_tokens_processed":1652,"slot_id":0,"t_prompt_processing":524.486,"t_token":0.3174854721549637,"task_id":3453,"tid":"12964064","timestamp":1783535933}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    9998.12 ms /   293 runs   (   34.12 ms per token,    29.31 tokens per second)","n_decoded":293,"n_tokens_second":29.30552116018658,"slot_id":0,"t_token":34.12326279863481,"t_token_generation":9998.116,"task_id":3453,"tid":"12964064","timestamp":1783535933}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   10522.60 ms","slot_id":0,"t_prompt_processing":524.486,"t_token_generation":9998.116,"t_total":10522.602,"task_id":3453,"tid":"12964064","timestamp":1783535933}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1945,"n_ctx":8000,"n_past":1944,"n_system_tokens":0,"slot_id":0,"task_id":3453,"tid":"12964064","timestamp":1783535933,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41030,"status":200,"tid":"137603182680816","timestamp":1783535933}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3748,"tid":"12964064","timestamp":1783535933}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3748,"tid":"12964064","timestamp":1783535933}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     771.27 ms /  2065 tokens (    0.37 ms per token,  2677.42 tokens per second)","n_tokens_second":2677.416092502457,"num_prompt_tokens_processed":2065,"slot_id":0,"t_prompt_processing":771.266,"t_token":0.37349443099273605,"task_id":3748,"tid":"12964064","timestamp":1783535939}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4612.20 ms /   120 runs   (   38.43 ms per token,    26.02 tokens per second)","n_decoded":120,"n_tokens_second":26.017952387147133,"slot_id":0,"t_token":38.434999999999995,"t_token_generation":4612.2,"task_id":3748,"tid":"12964064","timestamp":1783535939}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5383.47 ms","slot_id":0,"t_prompt_processing":771.266,"t_token_generation":4612.2,"t_total":5383.465999999999,"task_id":3748,"tid":"12964064","timestamp":1783535939}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2185,"n_ctx":8000,"n_past":2184,"n_system_tokens":0,"slot_id":0,"task_id":3748,"tid":"12964064","timestamp":1783535939,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41030,"status":200,"tid":"137603182680816","timestamp":1783535939}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3870,"tid":"12964064","timestamp":1783535990}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3870,"tid":"12964064","timestamp":1783535990}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     772.62 ms /  2072 tokens (    0.37 ms per token,  2681.79 tokens per second)","n_tokens_second":2681.7944725523776,"num_prompt_tokens_processed":2072,"slot_id":0,"t_prompt_processing":772.617,"t_token":0.37288465250965247,"task_id":3870,"tid":"12964064","timestamp":1783535995}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4543.03 ms /   118 runs   (   38.50 ms per token,    25.97 tokens per second)","n_decoded":118,"n_tokens_second":25.973860171264587,"slot_id":0,"t_token":38.50024576271187,"t_token_generation":4543.029,"task_id":3870,"tid":"12964064","timestamp":1783535995}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5315.65 ms","slot_id":0,"t_prompt_processing":772.617,"t_token_generation":4543.029,"t_total":5315.646000000001,"task_id":3870,"tid":"12964064","timestamp":1783535995}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2190,"n_ctx":8000,"n_past":2189,"n_system_tokens":0,"slot_id":0,"task_id":3870,"tid":"12964064","timestamp":1783535995,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":40000,"status":200,"tid":"137603182681088","timestamp":1783535995}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":3990,"tid":"12964064","timestamp":1783535995}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3990,"tid":"12964064","timestamp":1783535995}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     785.87 ms /  2108 tokens (    0.37 ms per token,  2682.39 tokens per second)","n_tokens_second":2682.3911455642565,"num_prompt_tokens_processed":2108,"slot_id":0,"t_prompt_processing":785.866,"t_token":0.37280170777988614,"task_id":3990,"tid":"12964064","timestamp":1783536002}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5313.34 ms /   136 runs   (   39.07 ms per token,    25.60 tokens per second)","n_decoded":136,"n_tokens_second":25.595933558979052,"slot_id":0,"t_token":39.068705882352944,"t_token_generation":5313.344,"task_id":3990,"tid":"12964064","timestamp":1783536002}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6099.21 ms","slot_id":0,"t_prompt_processing":785.866,"t_token_generation":5313.344,"t_total":6099.21,"task_id":3990,"tid":"12964064","timestamp":1783536002}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2244,"n_ctx":8000,"n_past":2243,"n_system_tokens":0,"slot_id":0,"task_id":3990,"tid":"12964064","timestamp":1783536002,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":40000,"status":200,"tid":"137603182681088","timestamp":1783536002}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":4128,"tid":"12964064","timestamp":1783536246}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":4128,"tid":"12964064","timestamp":1783536246}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     398.71 ms /  1427 tokens (    0.28 ms per token,  3579.02 tokens per second)","n_tokens_second":3579.0244587571983,"num_prompt_tokens_processed":1427,"slot_id":0,"t_prompt_processing":398.712,"t_token":0.27940574632095305,"task_id":4128,"tid":"12964064","timestamp":1783536254}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    7816.42 ms /   257 runs   (   30.41 ms per token,    32.88 tokens per second)","n_decoded":257,"n_tokens_second":32.879493967956186,"slot_id":0,"t_token":30.414093385214006,"t_token_generation":7816.422,"task_id":4128,"tid":"12964064","timestamp":1783536254}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    8215.13 ms","slot_id":0,"t_prompt_processing":398.712,"t_token_generation":7816.422,"t_total":8215.134,"task_id":4128,"tid":"12964064","timestamp":1783536254}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1684,"n_ctx":8000,"n_past":1683,"n_system_tokens":0,"slot_id":0,"task_id":4128,"tid":"12964064","timestamp":1783536254,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59058,"status":200,"tid":"137603180662016","timestamp":1783536254}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":4387,"tid":"12964064","timestamp":1783536254}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":4387,"tid":"12964064","timestamp":1783536254}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     608.71 ms /  1840 tokens (    0.33 ms per token,  3022.79 tokens per second)","n_tokens_second":3022.785891475415,"num_prompt_tokens_processed":1840,"slot_id":0,"t_prompt_processing":608.71,"t_token":0.33082065217391304,"task_id":4387,"tid":"12964064","timestamp":1783536260}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4681.01 ms /   131 runs   (   35.73 ms per token,    27.99 tokens per second)","n_decoded":131,"n_tokens_second":27.985425361375157,"slot_id":0,"t_token":35.73288549618321,"t_token_generation":4681.008,"task_id":4387,"tid":"12964064","timestamp":1783536260}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5289.72 ms","slot_id":0,"t_prompt_processing":608.71,"t_token_generation":4681.008,"t_total":5289.718,"task_id":4387,"tid":"12964064","timestamp":1783536260}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1971,"n_ctx":8000,"n_past":1970,"n_system_tokens":0,"slot_id":0,"task_id":4387,"tid":"12964064","timestamp":1783536260,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59058,"status":200,"tid":"137603180662016","timestamp":1783536260}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":4520,"tid":"12964064","timestamp":1783536262}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":4520,"tid":"12964064","timestamp":1783536262}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     603.23 ms /  1858 tokens (    0.32 ms per token,  3080.07 tokens per second)","n_tokens_second":3080.070221622491,"num_prompt_tokens_processed":1858,"slot_id":0,"t_prompt_processing":603.233,"t_token":0.3246679224973089,"task_id":4520,"tid":"12964064","timestamp":1783536267}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4683.81 ms /   130 runs   (   36.03 ms per token,    27.76 tokens per second)","n_decoded":130,"n_tokens_second":27.755152583951332,"slot_id":0,"t_token":36.02934615384615,"t_token_generation":4683.815,"task_id":4520,"tid":"12964064","timestamp":1783536267}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5287.05 ms","slot_id":0,"t_prompt_processing":603.233,"t_token_generation":4683.815,"t_total":5287.048,"task_id":4520,"tid":"12964064","timestamp":1783536267}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1988,"n_ctx":8000,"n_past":1987,"n_system_tokens":0,"slot_id":0,"task_id":4520,"tid":"12964064","timestamp":1783536267,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59058,"status":200,"tid":"137603180662016","timestamp":1783536267}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":4652,"tid":"12964064","timestamp":1783536267}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":4652,"tid":"12964064","timestamp":1783536267}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     608.31 ms /  1862 tokens (    0.33 ms per token,  3060.95 tokens per second)","n_tokens_second":3060.954419396785,"num_prompt_tokens_processed":1862,"slot_id":0,"t_prompt_processing":608.307,"t_token":0.32669548872180454,"task_id":4652,"tid":"12964064","timestamp":1783536274}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5958.47 ms /   164 runs   (   36.33 ms per token,    27.52 tokens per second)","n_decoded":164,"n_tokens_second":27.523830350494162,"slot_id":0,"t_token":36.33215243902439,"t_token_generation":5958.473,"task_id":4652,"tid":"12964064","timestamp":1783536274}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6566.78 ms","slot_id":0,"t_prompt_processing":608.307,"t_token_generation":5958.473,"t_total":6566.78,"task_id":4652,"tid":"12964064","timestamp":1783536274}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2026,"n_ctx":8000,"n_past":2025,"n_system_tokens":0,"slot_id":0,"task_id":4652,"tid":"12964064","timestamp":1783536274,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59058,"status":200,"tid":"137603180662016","timestamp":1783536274}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":4818,"tid":"12964064","timestamp":1783536274}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":4818,"tid":"12964064","timestamp":1783536274}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     383.23 ms /  1367 tokens (    0.28 ms per token,  3567.09 tokens per second)","n_tokens_second":3567.085740529087,"num_prompt_tokens_processed":1367,"slot_id":0,"t_prompt_processing":383.226,"t_token":0.2803408924652524,"task_id":4818,"tid":"12964064","timestamp":1783536286}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   11409.31 ms /   374 runs   (   30.51 ms per token,    32.78 tokens per second)","n_decoded":374,"n_tokens_second":32.780249881916596,"slot_id":0,"t_token":30.50617379679144,"t_token_generation":11409.309,"task_id":4818,"tid":"12964064","timestamp":1783536286}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   11792.53 ms","slot_id":0,"t_prompt_processing":383.226,"t_token_generation":11409.309,"t_total":11792.535,"task_id":4818,"tid":"12964064","timestamp":1783536286}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1741,"n_ctx":8000,"n_past":1740,"n_system_tokens":0,"slot_id":0,"task_id":4818,"tid":"12964064","timestamp":1783536286,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":59058,"status":200,"tid":"137603180662016","timestamp":1783536286}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":5194,"tid":"12964064","timestamp":1783536286}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":5194,"tid":"12964064","timestamp":1783536286}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     594.58 ms /  1826 tokens (    0.33 ms per token,  3071.08 tokens per second)","n_tokens_second":3071.0805460670495,"num_prompt_tokens_processed":1826,"slot_id":0,"t_prompt_processing":594.579,"t_token":0.325618291347207,"task_id":5194,"tid":"12964064","timestamp":1783536291}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4686.95 ms /   132 runs   (   35.51 ms per token,    28.16 tokens per second)","n_decoded":132,"n_tokens_second":28.163274450042728,"slot_id":0,"t_token":35.50723484848485,"t_token_generation":4686.955,"task_id":5194,"tid":"12964064","timestamp":1783536291}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5281.53 ms","slot_id":0,"t_prompt_processing":594.579,"t_token_generation":4686.955,"t_total":5281.534,"task_id":5194,"tid":"12964064","timestamp":1783536291}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1958,"n_ctx":8000,"n_past":1957,"n_system_tokens":0,"slot_id":0,"task_id":5194,"tid":"12964064","timestamp":1783536291,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":42652,"status":200,"tid":"137608594705152","timestamp":1783536291}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":5328,"tid":"12964064","timestamp":1783536291}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":5328,"tid":"12964064","timestamp":1783536291}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     611.42 ms /  1864 tokens (    0.33 ms per token,  3048.66 tokens per second)","n_tokens_second":3048.6608135868214,"num_prompt_tokens_processed":1864,"slot_id":0,"t_prompt_processing":611.416,"t_token":0.32801287553648073,"task_id":5328,"tid":"12964064","timestamp":1783536300}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    8507.02 ms /   231 runs   (   36.83 ms per token,    27.15 tokens per second)","n_decoded":231,"n_tokens_second":27.154034966168542,"slot_id":0,"t_token":36.82693939393939,"t_token_generation":8507.023,"task_id":5328,"tid":"12964064","timestamp":1783536300}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    9118.44 ms","slot_id":0,"t_prompt_processing":611.416,"t_token_generation":8507.023,"t_total":9118.438999999998,"task_id":5328,"tid":"12964064","timestamp":1783536300}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2095,"n_ctx":8000,"n_past":2094,"n_system_tokens":0,"slot_id":0,"task_id":5328,"tid":"12964064","timestamp":1783536300,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":42652,"status":200,"tid":"137608594705152","timestamp":1783536300}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":5561,"tid":"12964064","timestamp":1783536301}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":5561,"tid":"12964064","timestamp":1783536301}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     601.21 ms /  1843 tokens (    0.33 ms per token,  3065.49 tokens per second)","n_tokens_second":3065.494803795026,"num_prompt_tokens_processed":1843,"slot_id":0,"t_prompt_processing":601.208,"t_token":0.3262116115029842,"task_id":5561,"tid":"12964064","timestamp":1783536311}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   10243.30 ms /   278 runs   (   36.85 ms per token,    27.14 tokens per second)","n_decoded":278,"n_tokens_second":27.13968866091117,"slot_id":0,"t_token":36.84640647482014,"t_token_generation":10243.301,"task_id":5561,"tid":"12964064","timestamp":1783536311}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   10844.51 ms","slot_id":0,"t_prompt_processing":601.208,"t_token_generation":10243.301,"t_total":10844.509,"task_id":5561,"tid":"12964064","timestamp":1783536311}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2121,"n_ctx":8000,"n_past":2120,"n_system_tokens":0,"slot_id":0,"task_id":5561,"tid":"12964064","timestamp":1783536311,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":42652,"status":200,"tid":"137608594705152","timestamp":1783536311}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":5841,"tid":"12964064","timestamp":1783536312}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":5841,"tid":"12964064","timestamp":1783536312}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     412.45 ms /  1438 tokens (    0.29 ms per token,  3486.52 tokens per second)","n_tokens_second":3486.517022834504,"num_prompt_tokens_processed":1438,"slot_id":0,"t_prompt_processing":412.446,"t_token":0.2868191933240612,"task_id":5841,"tid":"12964064","timestamp":1783536321}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    8177.24 ms /   267 runs   (   30.63 ms per token,    32.65 tokens per second)","n_decoded":267,"n_tokens_second":32.65158375467532,"slot_id":0,"t_token":30.62638576779026,"t_token_generation":8177.245,"task_id":5841,"tid":"12964064","timestamp":1783536321}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    8589.69 ms","slot_id":0,"t_prompt_processing":412.446,"t_token_generation":8177.245,"t_total":8589.691,"task_id":5841,"tid":"12964064","timestamp":1783536321}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1705,"n_ctx":8000,"n_past":1704,"n_system_tokens":0,"slot_id":0,"task_id":5841,"tid":"12964064","timestamp":1783536321,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":42652,"status":200,"tid":"137608594705152","timestamp":1783536321}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":6110,"tid":"12964064","timestamp":1783536321}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":6110,"tid":"12964064","timestamp":1783536321}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     601.48 ms /  1843 tokens (    0.33 ms per token,  3064.11 tokens per second)","n_tokens_second":3064.1085322870254,"num_prompt_tokens_processed":1843,"slot_id":0,"t_prompt_processing":601.48,"t_token":0.32635919696147586,"task_id":6110,"tid":"12964064","timestamp":1783536326}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4797.92 ms /   134 runs   (   35.81 ms per token,    27.93 tokens per second)","n_decoded":134,"n_tokens_second":27.92875749126393,"slot_id":0,"t_token":35.80538805970149,"t_token_generation":4797.922,"task_id":6110,"tid":"12964064","timestamp":1783536326}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5399.40 ms","slot_id":0,"t_prompt_processing":601.48,"t_token_generation":4797.922,"t_total":5399.402,"task_id":6110,"tid":"12964064","timestamp":1783536326}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1977,"n_ctx":8000,"n_past":1976,"n_system_tokens":0,"slot_id":0,"task_id":6110,"tid":"12964064","timestamp":1783536326,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":42652,"status":200,"tid":"137608594705152","timestamp":1783536326}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":6246,"tid":"12964064","timestamp":1783536326}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":6246,"tid":"12964064","timestamp":1783536326}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     616.43 ms /  1855 tokens (    0.33 ms per token,  3009.28 tokens per second)","n_tokens_second":3009.2825416189453,"num_prompt_tokens_processed":1855,"slot_id":0,"t_prompt_processing":616.426,"t_token":0.3323051212938006,"task_id":6246,"tid":"12964064","timestamp":1783536332}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5422.26 ms /   150 runs   (   36.15 ms per token,    27.66 tokens per second)","n_decoded":150,"n_tokens_second":27.66375189081744,"slot_id":0,"t_token":36.14838666666667,"t_token_generation":5422.258,"task_id":6246,"tid":"12964064","timestamp":1783536332}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6038.68 ms","slot_id":0,"t_prompt_processing":616.426,"t_token_generation":5422.258,"t_total":6038.684,"task_id":6246,"tid":"12964064","timestamp":1783536332}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2005,"n_ctx":8000,"n_past":2004,"n_system_tokens":0,"slot_id":0,"task_id":6246,"tid":"12964064","timestamp":1783536332,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41010,"status":200,"tid":"137608594708000","timestamp":1783536332}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":6398,"tid":"12964064","timestamp":1783536332}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":6398,"tid":"12964064","timestamp":1783536332}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     619.77 ms /  1868 tokens (    0.33 ms per token,  3014.03 tokens per second)","n_tokens_second":3014.0310567825377,"num_prompt_tokens_processed":1868,"slot_id":0,"t_prompt_processing":619.768,"t_token":0.3317815845824411,"task_id":6398,"tid":"12964064","timestamp":1783536338}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5256.95 ms /   145 runs   (   36.25 ms per token,    27.58 tokens per second)","n_decoded":145,"n_tokens_second":27.582533598379293,"slot_id":0,"t_token":36.25482758620689,"t_token_generation":5256.95,"task_id":6398,"tid":"12964064","timestamp":1783536338}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5876.72 ms","slot_id":0,"t_prompt_processing":619.768,"t_token_generation":5256.95,"t_total":5876.718,"task_id":6398,"tid":"12964064","timestamp":1783536338}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2013,"n_ctx":8000,"n_past":2012,"n_system_tokens":0,"slot_id":0,"task_id":6398,"tid":"12964064","timestamp":1783536338,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41010,"status":200,"tid":"137608594708000","timestamp":1783536338}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":6545,"tid":"12964064","timestamp":1783536497}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":6545,"tid":"12964064","timestamp":1783536497}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     372.23 ms /  1347 tokens (    0.28 ms per token,  3618.70 tokens per second)","n_tokens_second":3618.7011898461446,"num_prompt_tokens_processed":1347,"slot_id":0,"t_prompt_processing":372.233,"t_token":0.27634224201930213,"task_id":6545,"tid":"12964064","timestamp":1783536509}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   11674.14 ms /   385 runs   (   30.32 ms per token,    32.98 tokens per second)","n_decoded":385,"n_tokens_second":32.978863375336125,"slot_id":0,"t_token":30.32245194805195,"t_token_generation":11674.144,"task_id":6545,"tid":"12964064","timestamp":1783536509}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   12046.38 ms","slot_id":0,"t_prompt_processing":372.233,"t_token_generation":11674.144,"t_total":12046.377,"task_id":6545,"tid":"12964064","timestamp":1783536509}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1732,"n_ctx":8000,"n_past":1731,"n_system_tokens":0,"slot_id":0,"task_id":6545,"tid":"12964064","timestamp":1783536509,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41460,"status":200,"tid":"137603182674880","timestamp":1783536509}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":6932,"tid":"12964064","timestamp":1783536509}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":6932,"tid":"12964064","timestamp":1783536509}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     596.17 ms /  1806 tokens (    0.33 ms per token,  3029.35 tokens per second)","n_tokens_second":3029.3474322674147,"num_prompt_tokens_processed":1806,"slot_id":0,"t_prompt_processing":596.168,"t_token":0.3301040974529347,"task_id":6932,"tid":"12964064","timestamp":1783536514}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4642.37 ms /   132 runs   (   35.17 ms per token,    28.43 tokens per second)","n_decoded":132,"n_tokens_second":28.43377096209757,"slot_id":0,"t_token":35.16944696969697,"t_token_generation":4642.367,"task_id":6932,"tid":"12964064","timestamp":1783536514}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5238.53 ms","slot_id":0,"t_prompt_processing":596.168,"t_token_generation":4642.367,"t_total":5238.535,"task_id":6932,"tid":"12964064","timestamp":1783536514}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1938,"n_ctx":8000,"n_past":1937,"n_system_tokens":0,"slot_id":0,"task_id":6932,"tid":"12964064","timestamp":1783536514,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41460,"status":200,"tid":"137603182674880","timestamp":1783536514}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":7066,"tid":"12964064","timestamp":1783536515}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":7066,"tid":"12964064","timestamp":1783536515}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     609.64 ms /  1852 tokens (    0.33 ms per token,  3037.87 tokens per second)","n_tokens_second":3037.8683743467436,"num_prompt_tokens_processed":1852,"slot_id":0,"t_prompt_processing":609.638,"t_token":0.3291781857451404,"task_id":7066,"tid":"12964064","timestamp":1783536522}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    6462.46 ms /   178 runs   (   36.31 ms per token,    27.54 tokens per second)","n_decoded":178,"n_tokens_second":27.54370784110561,"slot_id":0,"t_token":36.30593258426966,"t_token_generation":6462.456,"task_id":7066,"tid":"12964064","timestamp":1783536522}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    7072.09 ms","slot_id":0,"t_prompt_processing":609.638,"t_token_generation":6462.456,"t_total":7072.094,"task_id":7066,"tid":"12964064","timestamp":1783536522}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2030,"n_ctx":8000,"n_past":2029,"n_system_tokens":0,"slot_id":0,"task_id":7066,"tid":"12964064","timestamp":1783536522,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41460,"status":200,"tid":"137603182674880","timestamp":1783536522}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":7246,"tid":"12964064","timestamp":1783536524}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":7246,"tid":"12964064","timestamp":1783536524}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     594.30 ms /  1826 tokens (    0.33 ms per token,  3072.54 tokens per second)","n_tokens_second":3072.537805171488,"num_prompt_tokens_processed":1826,"slot_id":0,"t_prompt_processing":594.297,"t_token":0.32546385542168677,"task_id":7246,"tid":"12964064","timestamp":1783536531}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    6500.95 ms /   181 runs   (   35.92 ms per token,    27.84 tokens per second)","n_decoded":181,"n_tokens_second":27.842093183947938,"slot_id":0,"t_token":35.91683977900553,"t_token_generation":6500.948,"task_id":7246,"tid":"12964064","timestamp":1783536531}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    7095.25 ms","slot_id":0,"t_prompt_processing":594.297,"t_token_generation":6500.948,"t_total":7095.245000000001,"task_id":7246,"tid":"12964064","timestamp":1783536531}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2007,"n_ctx":8000,"n_past":2006,"n_system_tokens":0,"slot_id":0,"task_id":7246,"tid":"12964064","timestamp":1783536531,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41460,"status":200,"tid":"137603182674880","timestamp":1783536531}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":7429,"tid":"12964064","timestamp":1783536532}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":7429,"tid":"12964064","timestamp":1783536532}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     364.00 ms /  1293 tokens (    0.28 ms per token,  3552.24 tokens per second)","n_tokens_second":3552.236837767448,"num_prompt_tokens_processed":1293,"slot_id":0,"t_prompt_processing":363.996,"t_token":0.28151276102088163,"task_id":7429,"tid":"12964064","timestamp":1783536544}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   11559.82 ms /   390 runs   (   29.64 ms per token,    33.74 tokens per second)","n_decoded":390,"n_tokens_second":33.73755538365742,"slot_id":0,"t_token":29.64055897435897,"t_token_generation":11559.818,"task_id":7429,"tid":"12964064","timestamp":1783536544}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   11923.81 ms","slot_id":0,"t_prompt_processing":363.996,"t_token_generation":11559.818,"t_total":11923.813999999998,"task_id":7429,"tid":"12964064","timestamp":1783536544}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1683,"n_ctx":8000,"n_past":1682,"n_system_tokens":0,"slot_id":0,"task_id":7429,"tid":"12964064","timestamp":1783536544,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":41460,"status":200,"tid":"137603182674880","timestamp":1783536544}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":7821,"tid":"12964064","timestamp":1783536544}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":7821,"tid":"12964064","timestamp":1783536544}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     570.66 ms /  1752 tokens (    0.33 ms per token,  3070.10 tokens per second)","n_tokens_second":3070.1024243645575,"num_prompt_tokens_processed":1752,"slot_id":0,"t_prompt_processing":570.665,"t_token":0.3257220319634703,"task_id":7821,"tid":"12964064","timestamp":1783536549}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4736.77 ms /   138 runs   (   34.32 ms per token,    29.13 tokens per second)","n_decoded":138,"n_tokens_second":29.133776814158168,"slot_id":0,"t_token":34.32442028985508,"t_token_generation":4736.77,"task_id":7821,"tid":"12964064","timestamp":1783536549}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5307.44 ms","slot_id":0,"t_prompt_processing":570.665,"t_token_generation":4736.77,"t_total":5307.435,"task_id":7821,"tid":"12964064","timestamp":1783536549}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1890,"n_ctx":8000,"n_past":1889,"n_system_tokens":0,"slot_id":0,"task_id":7821,"tid":"12964064","timestamp":1783536549,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":32876,"status":200,"tid":"137608594708272","timestamp":1783536549}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":7961,"tid":"12964064","timestamp":1783536549}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":7961,"tid":"12964064","timestamp":1783536549}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     600.58 ms /  1807 tokens (    0.33 ms per token,  3008.78 tokens per second)","n_tokens_second":3008.778239556692,"num_prompt_tokens_processed":1807,"slot_id":0,"t_prompt_processing":600.576,"t_token":0.33236081903707804,"task_id":7961,"tid":"12964064","timestamp":1783536558}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    7865.15 ms /   219 runs   (   35.91 ms per token,    27.84 tokens per second)","n_decoded":219,"n_tokens_second":27.84435488761878,"slot_id":0,"t_token":35.91392237442923,"t_token_generation":7865.149,"task_id":7961,"tid":"12964064","timestamp":1783536558}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    8465.73 ms","slot_id":0,"t_prompt_processing":600.576,"t_token_generation":7865.149,"t_total":8465.725,"task_id":7961,"tid":"12964064","timestamp":1783536558}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2026,"n_ctx":8000,"n_past":2025,"n_system_tokens":0,"slot_id":0,"task_id":7961,"tid":"12964064","timestamp":1783536558,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":32876,"status":200,"tid":"137608594708272","timestamp":1783536558}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":8182,"tid":"12964064","timestamp":1783536558}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":8182,"tid":"12964064","timestamp":1783536558}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     576.16 ms /  1765 tokens (    0.33 ms per token,  3063.39 tokens per second)","n_tokens_second":3063.390487695237,"num_prompt_tokens_processed":1765,"slot_id":0,"t_prompt_processing":576.159,"t_token":0.3264356940509915,"task_id":8182,"tid":"12964064","timestamp":1783536564}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5746.07 ms /   165 runs   (   34.82 ms per token,    28.72 tokens per second)","n_decoded":165,"n_tokens_second":28.715293434622325,"slot_id":0,"t_token":34.82464848484849,"t_token_generation":5746.067,"task_id":8182,"tid":"12964064","timestamp":1783536564}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    6322.23 ms","slot_id":0,"t_prompt_processing":576.159,"t_token_generation":5746.067,"t_total":6322.226,"task_id":8182,"tid":"12964064","timestamp":1783536564}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1930,"n_ctx":8000,"n_past":1929,"n_system_tokens":0,"slot_id":0,"task_id":8182,"tid":"12964064","timestamp":1783536564,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":32876,"status":200,"tid":"137608594708272","timestamp":1783536564}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":8349,"tid":"12964064","timestamp":1783536565}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":8349,"tid":"12964064","timestamp":1783536565}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     376.04 ms /  1347 tokens (    0.28 ms per token,  3582.10 tokens per second)","n_tokens_second":3582.1038411215945,"num_prompt_tokens_processed":1347,"slot_id":0,"t_prompt_processing":376.036,"t_token":0.27916555308092056,"task_id":8349,"tid":"12964064","timestamp":1783536576}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   11210.68 ms /   371 runs   (   30.22 ms per token,    33.09 tokens per second)","n_decoded":371,"n_tokens_second":33.093443038245674,"slot_id":0,"t_token":30.21746630727763,"t_token_generation":11210.68,"task_id":8349,"tid":"12964064","timestamp":1783536576}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   11586.72 ms","slot_id":0,"t_prompt_processing":376.036,"t_token_generation":11210.68,"t_total":11586.716,"task_id":8349,"tid":"12964064","timestamp":1783536576}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1718,"n_ctx":8000,"n_past":1717,"n_system_tokens":0,"slot_id":0,"task_id":8349,"tid":"12964064","timestamp":1783536576,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":32876,"status":200,"tid":"137608594708272","timestamp":1783536576}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":8722,"tid":"12964064","timestamp":1783536576}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":8722,"tid":"12964064","timestamp":1783536576}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     580.50 ms /  1780 tokens (    0.33 ms per token,  3066.33 tokens per second)","n_tokens_second":3066.3327005433266,"num_prompt_tokens_processed":1780,"slot_id":0,"t_prompt_processing":580.498,"t_token":0.3261224719101124,"task_id":8722,"tid":"12964064","timestamp":1783536582}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    5346.74 ms /   153 runs   (   34.95 ms per token,    28.62 tokens per second)","n_decoded":153,"n_tokens_second":28.615556912976164,"slot_id":0,"t_token":34.94602614379085,"t_token_generation":5346.742,"task_id":8722,"tid":"12964064","timestamp":1783536582}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5927.24 ms","slot_id":0,"t_prompt_processing":580.498,"t_token_generation":5346.742,"t_total":5927.24,"task_id":8722,"tid":"12964064","timestamp":1783536582}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1933,"n_ctx":8000,"n_past":1932,"n_system_tokens":0,"slot_id":0,"task_id":8722,"tid":"12964064","timestamp":1783536582,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":32876,"status":200,"tid":"137608594708272","timestamp":1783536582}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":8877,"tid":"12964064","timestamp":1783536583}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":8877,"tid":"12964064","timestamp":1783536583}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     581.60 ms /  1775 tokens (    0.33 ms per token,  3051.93 tokens per second)","n_tokens_second":3051.930969619961,"num_prompt_tokens_processed":1775,"slot_id":0,"t_prompt_processing":581.599,"t_token":0.32766140845070424,"task_id":8877,"tid":"12964064","timestamp":1783536588}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =    4502.07 ms /   130 runs   (   34.63 ms per token,    28.88 tokens per second)","n_decoded":130,"n_tokens_second":28.875612523930663,"slot_id":0,"t_token":34.6313,"t_token_generation":4502.069,"task_id":8877,"tid":"12964064","timestamp":1783536588}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =    5083.67 ms","slot_id":0,"t_prompt_processing":581.599,"t_token_generation":4502.069,"t_total":5083.668000000001,"task_id":8877,"tid":"12964064","timestamp":1783536588}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":1905,"n_ctx":8000,"n_past":1904,"n_system_tokens":0,"slot_id":0,"task_id":8877,"tid":"12964064","timestamp":1783536588,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":49022,"status":200,"tid":"137603180662288","timestamp":1783536588}
+{"function":"launch_slot_with_data","level":"INFO","line":900,"msg":"slot is processing task","slot_id":0,"task_id":9009,"tid":"12964064","timestamp":1783536588}
+{"function":"update_slots","level":"INFO","line":1927,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":9009,"tid":"12964064","timestamp":1783536588}
+{"function":"print_timings","level":"INFO","line":324,"msg":"prompt eval time     =     605.89 ms /  1847 tokens (    0.33 ms per token,  3048.40 tokens per second)","n_tokens_second":3048.4030956063057,"num_prompt_tokens_processed":1847,"slot_id":0,"t_prompt_processing":605.891,"t_token":0.3280406063887385,"task_id":9009,"tid":"12964064","timestamp":1783536600}
+{"function":"print_timings","level":"INFO","line":338,"msg":"generation eval time =   10997.92 ms /   297 runs   (   37.03 ms per token,    27.01 tokens per second)","n_decoded":297,"n_tokens_second":27.00509659823072,"slot_id":0,"t_token":37.03004713804714,"t_token_generation":10997.924,"task_id":9009,"tid":"12964064","timestamp":1783536600}
+{"function":"print_timings","level":"INFO","line":347,"msg":"          total time =   11603.82 ms","slot_id":0,"t_prompt_processing":605.891,"t_token_generation":10997.924,"t_total":11603.815,"task_id":9009,"tid":"12964064","timestamp":1783536600}
+{"function":"update_slots","level":"INFO","line":1742,"msg":"slot released","n_cache_tokens":2144,"n_ctx":8000,"n_past":2143,"n_system_tokens":0,"slot_id":0,"task_id":9009,"tid":"12964064","timestamp":1783536600,"truncated":false}
+{"function":"log_server_request","level":"INFO","line":2842,"method":"POST","msg":"request","params":{},"path":"/v1/chat/completions","remote_addr":"127.0.0.1","remote_port":49022,"status":200,"tid":"137603180662288","timestamp":1783536600}

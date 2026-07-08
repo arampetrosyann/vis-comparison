@@ -1,0 +1,175 @@
+Obtaining file:///root/vis-comparison
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: vis-comparison
+  Building editable for vis-comparison (pyproject.toml): started
+  Building editable for vis-comparison (pyproject.toml): finished with status 'done'
+  Created wheel for vis-comparison: filename=vis_comparison-0.1.0-0.editable-py3-none-any.whl size=2790 sha256=ee70779db8977b8401096a376b26f4ca01afac3adb5ac065aaafb5172d280e39
+  Stored in directory: /tmp/pip-ephem-wheel-cache-3jy8jtie/wheels/70/3b/a2/0e64470a4ecd138a2d36fda480b58a6e0e0e5d8e339d807a8d
+Successfully built vis-comparison
+Installing collected packages: vis-comparison
+  Attempting uninstall: vis-comparison
+    Found existing installation: vis-comparison 0.1.0
+    Uninstalling vis-comparison-0.1.0:
+      Successfully uninstalled vis-comparison-0.1.0
+Successfully installed vis-comparison-0.1.0
+Starting!!!
+
+Running Lida...
+
+Running LIDA for src/data/comparison-all-DPA.csv...
+
+Error decoding JSON: The number of GOALS to generate is 3. The goals should be based on the data summary below, 
+
+ .
+        {'name': 'comparison-all-DPA.csv', 'file_name': 'comparison-all-DPA.csv', 'dataset_description': '', 'fields': [{'column': 'index', 'properties': {'dtype': 'number', 'std': 104, 'min': 0, 'max': 359, 'samples': [224, 42, 285], 'num_unique_values': 360, 'semantic_type': '', 'description': ''}}, {'column': 'build', 'properties': {'dtype': 'category', 'samples': ['DPA IPLOOKUP 1K', 'DPA ETHERMIRROR', 'DPA CRC'], 'num_unique_values': 4, 'semantic_type': '', 'description': ''}}, {'column': 'test_index', 'properties': {'dtype': 'number', 'std': 8, 'min': 0, 'max': 29, 'samples': [27, 15, 23], 'num_unique_values': 30, 'semantic_type': '', 'description': ''}}, {'column': 'SIZE', 'properties': {'dtype': 'number', 'std': 349, 'min': 64, 'max': 1024, 'samples': [128, 1024, 256], 'num_unique_values': 5, 'semantic_type': '', 'description': ''}}, {'column': 'NTHREADS', 'properties': {'dtype': 'number', 'std': 86, 'min': 16, 'max': 254, 'samples': [16, 32, 254], 'num_unique_values': 6, 'semantic_type': '', 'description': ''}}, {'column': 'y_RX-RATE-PPS', 'properties': {'dtype': 'number', 'std': 15661584.009579455, 'min': 6913.0, 'max': 67122991.0, 'samples': [1713849.0, 141322.0, 44720392.0], 'num_unique_values': 336, 'semantic_type': '', 'description': ''}}, {'column': 'y_RX-RATE-MBPS', 'properties': {'dtype': 'number', 'std': 32725.911511245802, 'min': 4.646644, 'max': 98848.5664776, 'samples': [37.181188, 4811.548516, 15723.373812], 'num_unique_values': 359, 'semantic_type': '', 'description': ''}}, {'column': 'y_LOSE-RATE', 'properties': {'dtype': 'number', 'std': 0.33786298998364217, 'min': 2.0916867178311e-06, 'max': 0.99993617987887, 'samples': [0.99765868579967, 0.95124860377181, 0.7336422324243], 'num_unique_values': 360, 'semantic_type': '', 'description': ''}}, {'column': 'y_AVG-LAT', 'properties': {'dtype': 'number', 'std': 0.0, 'min': 0.0, 'max': 0.0, 'samples': [0.0], 'num_unique_values': 1, 'semantic_type': '', 'description': ''}}, {'column': 'y_RX-GOODPUT-GBPS-PKTGEN', 'properties': {'dtype': 'number', 'std': 37.48398240195312, 'min': 1.0, 'max': 99.0, 'samples': [70.0], 'num_unique_values': 33, 'semantic_type': '', 'description': ''}}, {'column': 'y_GOODRATEPC', 'properties': {'dtype': 'number', 'std': 33.786298998364224, 'min': 0.0063820121130042, 'max': 99.9997908313282, 'samples': [0.2341314200330013], 'num_unique_values': 360, 'semantic_type': '', 'description': ''}}, {'column': 'run_index', 'properties': {'dtype': 'number', 'std': 0, 'min': 0, 'max': 2, 'samples': [0], 'num_unique_values': 3, 'semantic_type': '', 'description': ''}}], 'field_names': ['index', 'build', 'test_index', 'SIZE', 'NTHREADS', 'y_RX-RATE-PPS', 'y_RX-RATE-MBPS', 'y_LOSE-RATE', 'y_AVG-LAT', 'y_RX-GOODPUT-GBPS-PKTGEN', 'y_GOODRATEPC', 'run_index']} 
+
+
+ The generated goals SHOULD BE FOCUSED ON THE INTERESTS AND PERSPECTIVE of a 'You are a data analyst focused on generating visualizations persona, who is insterested in complex, insightful goals about the data. 
+
+
+ 
+THE OUTPUT MUST BE A CODE SNIPPET OF A VALID LIST OF JSON OBJECTS. IT MUST USE THE FOLLOWING FORMAT:
+
+```[
+    { "index": 0,  "question": "What is the distribution of X", "visualization": "histogram of X", "rationale": "This tells about "} ..
+    ]
+```
+THE OUTPUT SHOULD ONLY USE THE JSON FORMAT ABOVE.
+ 
+
+. The generated 3 goals are: 
+ 1. **Goal 1**...
+We need to produce 3 goals in JSON list. Each goal: index, question, visualization, rationale. Use exact column names from summary. Persona: data analyst focused on generating visualizations, interested in complex, insightful goals. Use best practices: bar charts for comparing quantities, etc. Provide rationale referencing fields.
+
+We have dataset fields: index, build, test_index, SIZE, NTHREADS, y_RX-RATE-PPS, y_RX-RATE-MBPS, y_LOSE-RATE, y_AVG-LAT, y_RX-GOODPUT-GBPS-PKTGEN, y_GOODRATEPC, run_index.
+
+Goal 1: Compare throughput (y_RX-RATE-MBPS) across builds and sizes. Use grouped bar chart: x-axis SIZE, bars colored by build. Or maybe facet by build. Provide rationale.
+
+Goal 2: Investigate loss rate vs number of threads. Scatter plot: x NTHREADS, y y_LOSE-RATE, color by build. Provide rationale.
+
+Goal 3: Relationship between packet rate (y_RX-RATE-PPS) and goodput (y_RX-GOODPUT-GBPS-PKTGEN). Use scatter plot with regression line, maybe facet by build. Provide rationale.
+
+We need to mention exact fields. Provide visualization description referencing fields. Use best practices: bar chart for comparing quantities, scatter for relationships.
+
+Let's craft JSON objects.
+
+Index 0, 1, 2.
+
+Visualization field: string describing type and fields. Eg: "grouped bar chart of y_RX-RATE-MBPS by SIZE and build". Provide rationale referencing fields.
+
+Let's produce final JSON.
+LIDA error processing comparison-all-DPA.csv - The model did not return a valid JSON object while attempting generate goals. Consider using a larger model or a model with higher max token length.
+
+Running LIDA for src/data/iplookup-cpu.csv...
+
+Error decoding JSON: The number of GOALS to generate is 3. The goals should be based on the data summary below, 
+
+ .
+        {'name': 'iplookup-cpu.csv', 'file_name': 'iplookup-cpu.csv', 'dataset_description': '', 'fields': [{'column': 'index', 'properties': {'dtype': 'number', 'std': 21, 'min': 0, 'max': 74, 'samples': [4, 63, 10], 'num_unique_values': 75, 'semantic_type': '', 'description': ''}}, {'column': 'build', 'properties': {'dtype': 'category', 'samples': ['Local'], 'num_unique_values': 1, 'semantic_type': '', 'description': ''}}, {'column': 'test_index', 'properties': {'dtype': 'number', 'std': 7, 'min': 0, 'max': 24, 'samples': [8], 'num_unique_values': 25, 'semantic_type': '', 'description': ''}}, {'column': 'SIZE', 'properties': {'dtype': 'number', 'std': 351, 'min': 64, 'max': 1024, 'samples': [128], 'num_unique_values': 5, 'semantic_type': '', 'description': ''}}, {'column': 'NTHREADS', 'properties': {'dtype': 'number', 'std': 5, 'min': 1, 'max': 16, 'samples': [2], 'num_unique_values': 5, 'semantic_type': '', 'description': ''}}, {'column': 'RX-RATE-PPS', 'properties': {'dtype': 'number', 'std': 6928753.82992086, 'min': 9090652.0, 'max': 29101096.0, 'samples': [9313268.0], 'num_unique_values': 75, 'semantic_type': '', 'description': ''}}, {'column': 'RX-RATE-MBPS', 'properties': {'dtype': 'number', 'std': 30622.36957430818, 'min': 6334.2364064, 'max': 97324.5755168, 'samples': [11026.9026848], 'num_unique_values': 75, 'semantic_type': '', 'description': ''}}, {'column': 'LOSE-RATE', 'properties': {'dtype': 'number', 'std': 0.2897523895130678, 'min': 0.0, 'max': 0.81577884681336, 'samples': [0.81468163796362], 'num_unique_values': 59, 'semantic_type': '', 'description': ''}}, {'column': 'AVG-LAT', 'properties': {'dtype': 'number', 'std': 0.00028811627645015627, 'min': 6.5829861111111e-05, 'max': 0.0014080266203704, 'samples': [0.0003499602623456], 'num_unique_values': 75, 'semantic_type': '', 'description': ''}}, {'column': 'RX-GOODPUT-GBPS-PKTGEN', 'properties': {'dtype': 'number', 'std': 31.130142398738972, 'min': 6.0, 'max': 99.0, 'samples': [99.0], 'num_unique_values': 29, 'semantic_type': '', 'description': ''}}, {'column': 'run_index', 'properties': {'dtype': 'number', 'std': 0, 'min': 0, 'max': 2, 'samples': [0], 'num_unique_values': 3, 'semantic_type': '', 'description': ''}}], 'field_names': ['index', 'build', 'test_index', 'SIZE', 'NTHREADS', 'RX-RATE-PPS', 'RX-RATE-MBPS', 'LOSE-RATE', 'AVG-LAT', 'RX-GOODPUT-GBPS-PKTGEN', 'run_index']} 
+
+
+ The generated goals SHOULD BE FOCUSED ON THE INTERESTS AND PERSPECTIVE of a 'You are a data analyst focused on generating visualizations persona, who is insterested in complex, insightful goals about the data. 
+
+
+ 
+THE OUTPUT MUST BE A CODE SNIPPET OF A VALID LIST OF JSON OBJECTS. IT MUST USE THE FOLLOWING FORMAT:
+
+```[
+    { "index": 0,  "question": "What is the distribution of X", "visualization": "histogram of X", "rationale": "This tells about "} ..
+    ]
+```
+THE OUTPUT SHOULD ONLY USE THE JSON FORMAT ABOVE.
+ 
+
+. The generated 3 goals are: 
+ 1. 
+ 2. 
+ 3. 
+The persona is: **Data analyst focused on generating visualizations**
+
+We need to produce a JSON list of 3 objects, each with index, question, visualization, rationale. Must reference exact column fields from summary. Use best practices: bar charts for comparing quantities, histograms for distribution, scatter for relationships, etc. Provide rationale referencing fields.
+
+We have dataset iplookup-cpu.csv with columns: index, build, test_index, SIZE, NTHREADS, RX-RATE-PPS, RX-RATE-MBPS, LOSE-RATE, AVG-LAT, RX-GOODPUT-GBPS-PKTGEN, run_index.
+
+We need 3 goals. Let's think of interesting insights: 1) Relationship between packet size (SIZE) and RX-RATE-MBPS, maybe with NTHREADS as hue. 2) Distribution of LOSE-RATE across test_index or across SIZE. 3) Compare RX-GOODPUT-GBPS-PKTGEN across NTHREADS and SIZE. Or average latency vs RX-RATE-PPS.
+
+Goal 1: Question: How does packet size affect throughput (RX-RATE-MBPS) across different thread counts? Visualization: scatter plot with SIZE on x-axis, RX-RATE-MBPS on y-axis, color by NTHREADS. Rationale: SIZE and RX-RATE-MBPS show throughput, NTHREADS indicates concurrency.
+
+Goal 2: Question: What is the distribution of packet loss rates (LOSE-RATE) across different test indices? Visualization: boxplot of LOSE-RATE by test_index. Rationale: LOSE-RATE distribution per test_index shows variability.
+
+Goal 3: Question: How does average latency (AVG-LAT) vary with throughput (RX-RATE-PPS) across runs? Visualization: scatter plot with RX-RATE-PPS on x, AVG-LAT on y, facet by run_index. Rationale: Relationship between throughput and latency.
+
+Alternatively, use bar chart for average RX-GOODPUT-GBPS-PKTGEN by SIZE. But bar chart for comparing quantities across categories: SIZE categories. Use bar chart of mean RX-GOODPUT-GBPS-PKTGEN by SIZE. That might be better.
+
+Let's choose: 1) Scatter of SIZE vs RX-RATE-MBPS colored by NTHREADS. 2) Boxplot of LOSE-RATE by test_index. 3) Bar chart of mean RX-GOODPUT-GBPS-PKTGEN by SIZE.
+
+We need to reference exact column names: SIZE, RX-RATE-MBPS, NTHREADS, LOSE-RATE, test_index, RX-GOODPUT-GBPS-PKTGEN.
+
+Let's craft JSON objects.
+
+Index 0: question: "How does packet size influence throughput (RX-RATE-MBPS) across different thread counts?" Visualization: "scatter plot of SIZE vs RX-RATE-MBPS colored by NTHREADS". Rationale: "By plotting SIZE on the x-axis and RX-RATE-MBPS on the y-axis, we can see how throughput scales with packet size. Coloring by NTHREADS reveals the impact of concurrency on this relationship."
+
+Index 1: question: "What is the distribution of packet loss rates (LOSE-RATE) across test indices?" Visualization: "boxplot of LOSE-RATE by test_index". Rationale: "Boxplots show median, quartiles, and outliers of LOSE-RATE for each test_index, highlighting variability and potential problematic test indices."
+
+Index 2: question: "What is the average packet goodput (RX-GOODPUT-GBPS-PKTGEN) for each packet size?" Visualization: "bar chart of mean RX-GOODPUT-GBPS-PKTGEN by SIZE". Rationale: "Bar chart compares the mean goodput across packet sizes, making it easy to identify which sizes yield higher throughput."
+
+Make sure to use exact column names. Provide JSON list.
+LIDA error processing iplookup-cpu.csv - The model did not return a valid JSON object while attempting generate goals. Consider using a larger model or a model with higher max token length.
+
+Running LIDA for src/data/scalability-energy-crc-TIME.csv...
+
+Error decoding JSON: The number of GOALS to generate is 3. The goals should be based on the data summary below, 
+
+ .
+        {'name': 'scalability-energy-crc-TIME.csv', 'file_name': 'scalability-energy-crc-TIME.csv', 'dataset_description': '', 'fields': [{'column': 'index', 'properties': {'dtype': 'number', 'std': 6510, 'min': 0, 'max': 22550, 'samples': [12959, 14184, 8056], 'num_unique_values': 22551, 'semantic_type': '', 'description': ''}}, {'column': 'build', 'properties': {'dtype': 'category', 'samples': ['CPU', 'ROI', 'Zero-Copy'], 'num_unique_values': 3, 'semantic_type': '', 'description': ''}}, {'column': 'test_index', 'properties': {'dtype': 'number', 'std': 4140, 'min': 0, 'max': 14369, 'samples': [5970, 9434, 11469], 'num_unique_values': 14370, 'semantic_type': '', 'description': ''}}, {'column': 'UNCORE_PSTATE', 'properties': {'dtype': 'number', 'std': 0, 'min': 0, 'max': 2, 'samples': [0, 1, 2], 'num_unique_values': 3, 'semantic_type': '', 'description': ''}}, {'column': 'NTHREADS', 'properties': {'dtype': 'number', 'std': 6, 'min': 1, 'max': 16, 'samples': [1, 4, 16], 'num_unique_values': 3, 'semantic_type': '', 'description': ''}}, {'column': 'CPUFREQ', 'properties': {'dtype': 'number', 'std': 702, 'min': 800, 'max': 2500, 'samples': [800, 1500, 2500], 'num_unique_values': 3, 'semantic_type': '', 'description': ''}}, {'column': 'TIME', 'properties': {'dtype': 'number', 'std': 29776.17942198722, 'min': 1760150608.2, 'max': 1760254538.6, 'samples': [1760216740.4, 1760223665.1, 1760189582.8], 'num_unique_values': 22551, 'semantic_type': '', 'description': ''}}, {'column': 'RATE', 'properties': {'dtype': 'number', 'std': 25, 'min': 10, 'max': 100, 'samples': [10, 20, 100], 'num_unique_values': 6, 'semantic_type': '', 'description': ''}}, {'column': 'y_GPU-POWER', 'properties': {'dtype': 'number', 'std': 3.7904457957457285, 'min': 26.72, 'max': 49.83, 'samples': [33.53, 38.49, 36.08], 'num_unique_values': 1363, 'semantic_type': '', 'description': ''}}, {'column': 'y_IPMI-POWER', 'properties': {'dtype': 'number', 'std': 17.06860852627286, 'min': 324.0, 'max': 432.0, 'samples': [420.0, 360.0, 384.0], 'num_unique_values': 10, 'semantic_type': '', 'description': ''}}, {'column': 'y_RAPL-POWER', 'properties': {'dtype': 'number', 'std': 10.083228871648837, 'min': 70.627421, 'max': 125.494823, 'samples': [78.474854, 74.809059, 76.46829], 'num_unique_values': 22390, 'semantic_type': '', 'description': ''}}, {'column': 'y_PDU-POWER', 'properties': {'dtype': 'number', 'std': 17.81113930475782, 'min': 309.186, 'max': 433.362, 'samples': [374.736, 364.614, 364.724], 'num_unique_values': 11735, 'semantic_type': '', 'description': ''}}, {'column': 'run_index', 'properties': {'dtype': 'number', 'std': 0, 'min': 0, 'max': 0, 'samples': [0], 'num_unique_values': 1, 'semantic_type': '', 'description': ''}}], 'field_names': ['index', 'build', 'test_index', 'UNCORE_PSTATE', 'NTHREADS', 'CPUFREQ', 'TIME', 'RATE', 'y_GPU-POWER', 'y_IPMI-POWER', 'y_RAPL-POWER', 'y_PDU-POWER', 'run_index']} 
+
+
+ The generated goals SHOULD BE FOCUSED ON THE INTERESTS AND PERSPECTIVE of a 'You are a data analyst focused on generating visualizations persona, who is insterested in complex, insightful goals about the data. 
+
+
+ 
+THE OUTPUT MUST BE A CODE SNIPPET OF A VALID LIST OF JSON OBJECTS. IT MUST USE THE FOLLOWING FORMAT:
+
+```[
+    { "index": 0,  "question": "What is the distribution of X", "visualization": "histogram of X", "rationale": "This tells about "} ..
+    ]
+```
+THE OUTPUT SHOULD ONLY USE THE JSON FORMAT ABOVE.
+ 
+
+. The generated 3 goals are: 
+  - **Goal 1**: ... 
+We need to produce 3 goals in JSON list format. Each goal includes index, question, visualization, rationale. Must reference exact column fields from summary. Must follow best practices. Persona: data analyst focused on generating visualizations, interested in complex, insightful goals. So we should propose advanced visualizations: maybe faceted bar charts, line charts, heatmaps, etc. Use columns: build, NTHREADS, CPUFREQ, TIME, RATE, y_GPU-POWER, y_IPMI-POWER, y_RAPL-POWER, y_PDU-POWER. Provide rationale referencing fields.
+
+We need to ensure visualization type is appropriate: e.g., bar chart for comparing categories, line chart for time series, heatmap for correlation, scatter plot for relationship, etc. Use exact column names.
+
+Goal 1: Compare average GPU power consumption across build types and thread counts. Use bar chart with build on x-axis, average y_GPU-POWER as y, grouped by NTHREADS. Or maybe use faceted bar chart.
+
+Goal 2: Investigate relationship between CPU frequency and total power consumption (sum of all power columns). Use scatter plot with CPUFREQ vs total power. Or line chart across CPUFREQ.
+
+Goal 3: Analyze how power consumption changes with test index for different build types. Use line chart with test_index on x-axis, y_PDU-POWER on y, color by build.
+
+We need to reference exact column names: 'build', 'NTHREADS', 'y_GPU-POWER', 'CPUFREQ', 'y_IPMI-POWER', 'y_RAPL-POWER', 'y_PDU-POWER', 'test_index'.
+
+Also mention 'TIME' maybe.
+
+Let's craft JSON objects.
+
+Index 0: question: "How does GPU power consumption vary across build types and thread counts?" Visualization: "bar chart of average y_GPU-POWER by build, grouped by NTHREADS". Rationale: uses build, NTHREADS, y_GPU-POWER.
+
+Index 1: question: "What is the relationship between CPU frequency and total power consumption?" Visualization: "scatter plot of CPUFREQ vs total_power (sum of y_GPU-POWER, y_IPMI-POWER, y_RAPL-POWER, y_PDU-POWER)". Rationale: uses CPUFREQ, y_* columns.
+
+Index 2: question: "How does PDU power consumption evolve over test indices for each build type?" Visualization: "line chart of y_PDU-POWER over test_index, colored by build". Rationale: uses test_index, y_PDU-POWER, build.
+
+Make sure to mention fields exactly. Provide rationale referencing fields.
+
+Let's produce JSON list.
+LIDA error processing scalability-energy-crc-TIME.csv - The model did not return a valid JSON object while attempting generate goals. Consider using a larger model or a model with higher max token length.
+

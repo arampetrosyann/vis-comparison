@@ -9,8 +9,8 @@ from lida import Manager, TextGenerationConfig, llm
 def _build_custom_lida_manager():
 	base_url = os.getenv("VLLM_BASE_URL", "http://localhost:8000/v1")
 	api_key = os.getenv("VLLM_API_KEY", "EMPTY")
-	model_name = os.getenv("LIDA_MODEL", "meta-llama/Meta-Llama-3.1-8B-Instruct")
-
+	model_name = os.getenv("LIDA_MODEL", "granite-3.2-8b-instruct-Q4_K_M")
+	
 	os.environ["OPENAI_BASE_URL"] = base_url
 
 	manager = Manager(text_gen=llm("openai", api_key=api_key, model=model_name))
@@ -70,6 +70,7 @@ def run_lida(data_dir: str = "src/data", n_goals: int = 3, backend: str = "custo
 
 		try:
 			df = pd.read_csv(csv_path)
+			# df.drop(columns=['index', 'test_index', 'run_index', 'build'], inplace=True)
 			summary = manager.summarize(
 				df,
 				file_name=csv_path.name,
@@ -87,7 +88,7 @@ def run_lida(data_dir: str = "src/data", n_goals: int = 3, backend: str = "custo
 				charts = manager.visualize(
 					summary=summary,
 					goal=goal,
-					library="matplotlib",
+					library="seaborn",
 					textgen_config=textgen_config,
 				)
 

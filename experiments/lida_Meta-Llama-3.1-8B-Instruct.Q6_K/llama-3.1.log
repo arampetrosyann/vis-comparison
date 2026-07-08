@@ -1,0 +1,138 @@
+import_cuda_impl: initializing gpu module...
+get_rocm_bin_path: note: hipcc not found on $PATH
+get_rocm_bin_path: note: $HIP_PATH/bin/hipcc does not exist
+get_rocm_bin_path: note: /opt/rocm/bin/hipcc does not exist
+link_cuda_dso: note: dynamically linking /root/.llamafile/v/0.9.2/ggml-rocm.so
+link_cuda_dso: warning: libamdhip64.so.6: cannot open shared object file: No such file or directory: failed to load library
+link_cuda_dso: note: dynamically linking /root/.llamafile/v/0.9.2/ggml-rocm.so
+link_cuda_dso: warning: libamdhip64.so.6: cannot open shared object file: No such file or directory: failed to load library
+get_nvcc_path: note: nvcc not found on $PATH
+get_nvcc_path: note: $CUDA_PATH/bin/nvcc does not exist
+get_nvcc_path: note: /opt/cuda/bin/nvcc does not exist
+get_nvcc_path: note: /usr/local/cuda/bin/nvcc does not exist
+link_cuda_dso: note: dynamically linking /root/.llamafile/v/0.9.2/ggml-cuda.so
+ggml_cuda_link: CUDA kernel version 13.0
+ggml_cuda_link: CUDA runtime version is 12.8
+ggml_cuda_link: welcome to CUDA SDK with tinyBLAS
+link_cuda_dso: GPU support loaded
+{"build":1500,"commit":"a30b324","function":"server_cli","level":"INFO","line":2911,"msg":"build info","tid":"12964064","timestamp":1783441051}
+{"function":"server_cli","level":"INFO","line":2918,"msg":"system info","n_threads":4,"n_threads_batch":4,"system_info":"AVX = 1 | AVX_VNNI = 0 | AVX2 = 1 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 1 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 1 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | ","tid":"12964064","timestamp":1783441051,"total_threads":4}
+llama_model_loader: loaded meta data with 30 key-value pairs and 292 tensors from Meta-Llama-3.1-8B-Instruct.Q6_K.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                         general.size_label str              = 8.0B
+llama_model_loader: - kv   3:                            general.license str              = llama3.1
+llama_model_loader: - kv   4:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   5:                  general.base_model.0.name str              = Meta Llama 3.1 8B
+llama_model_loader: - kv   6:          general.base_model.0.organization str              = Meta Llama
+llama_model_loader: - kv   7:              general.base_model.0.repo_url str              = https://huggingface.co/meta-llama/Met...
+llama_model_loader: - kv   8:                               general.tags arr[str,6]       = ["facebook", "meta", "pytorch", "llam...
+llama_model_loader: - kv   9:                          general.languages arr[str,8]       = ["en", "de", "fr", "it", "pt", "hi", ...
+llama_model_loader: - kv  10:                          llama.block_count u32              = 32
+llama_model_loader: - kv  11:                       llama.context_length u32              = 131072
+llama_model_loader: - kv  12:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv  13:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv  14:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv  15:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  16:                       llama.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  17:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  18:                          general.file_type u32              = 18
+llama_model_loader: - kv  19:                           llama.vocab_size u32              = 128256
+llama_model_loader: - kv  20:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  21:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  22:                         tokenizer.ggml.pre str              = llama-bpe
+llama_model_loader: - kv  23:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  24:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  25:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+llama_model_loader: - kv  26:                tokenizer.ggml.bos_token_id u32              = 128000
+llama_model_loader: - kv  27:                tokenizer.ggml.eos_token_id u32              = 128009
+llama_model_loader: - kv  28:                    tokenizer.chat_template str              = {{- bos_token }}\n{%- if custom_tools ...
+llama_model_loader: - kv  29:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   66 tensors
+llama_model_loader: - type q6_K:  226 tensors
+llm_load_vocab: special tokens cache size = 256
+llm_load_vocab: token to piece cache size = 0.7999 MB
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = BPE
+llm_load_print_meta: n_vocab          = 128256
+llm_load_print_meta: n_merges         = 280147
+llm_load_print_meta: vocab_only       = 0
+llm_load_print_meta: n_ctx_train      = 131072
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_swa            = 0
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: f_logit_scale    = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: causal attn      = 1
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 500000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_ctx_orig_yarn  = 131072
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: ssm_d_conv       = 0
+llm_load_print_meta: ssm_d_inner      = 0
+llm_load_print_meta: ssm_d_state      = 0
+llm_load_print_meta: ssm_dt_rank      = 0
+llm_load_print_meta: model type       = 8B
+llm_load_print_meta: model ftype      = Q6_K
+llm_load_print_meta: model params     = 8.03 B
+llm_load_print_meta: model size       = 6.14 GiB (6.56 BPW) 
+llm_load_print_meta: general.name     = n/a
+llm_load_print_meta: BOS token        = 128000 '<|begin_of_text|>'
+llm_load_print_meta: EOS token        = 128009 '<|eot_id|>'
+llm_load_print_meta: LF token         = 128 'Ä'
+llm_load_print_meta: EOT token        = 128009 '<|eot_id|>'
+llm_load_print_meta: max token length = 256
+ggml_cuda_init: GGML_CUDA_FORCE_MMQ:    no
+ggml_cuda_init: GGML_CUDA_FORCE_CUBLAS: no
+ggml_cuda_init: found 1 CUDA devices:
+  Device %d: %s, compute capability %d.%d, VMM: %s
+llm_load_tensors: ggml ctx size =    0.32 MiB
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloaded 33/33 layers to GPU
+llm_load_tensors:        CPU buffer size =   410.98 MiB
+llm_load_tensors:      CUDA0 buffer size =  5872.00 MiB
+.........................................................................................
+llama_new_context_with_model: n_ctx      = 20000
+llama_new_context_with_model: n_batch    = 2048
+llama_new_context_with_model: n_ubatch   = 512
+llama_new_context_with_model: flash_attn = 0
+llama_new_context_with_model: freq_base  = 500000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:      CUDA0 KV buffer size =  2500.00 MiB
+llama_new_context_with_model: KV self size  = 2500.00 MiB, K (f16): 1250.00 MiB, V (f16): 1250.00 MiB
+llama_new_context_with_model:  CUDA_Host  output buffer size =     0.49 MiB
+llama_new_context_with_model:      CUDA0 compute buffer size =  1321.07 MiB
+llama_new_context_with_model:  CUDA_Host compute buffer size =    47.07 MiB
+llama_new_context_with_model: graph nodes  = 1030
+llama_new_context_with_model: graph splits = 2
+{"function":"initialize","level":"INFO","line":502,"msg":"initializing slots","n_slots":1,"tid":"12964064","timestamp":1783441053}
+{"function":"initialize","level":"INFO","line":514,"msg":"new slot","n_ctx_slot":20000,"slot_id":0,"tid":"12964064","timestamp":1783441053}
+{"function":"server_cli","level":"INFO","line":3131,"msg":"model loaded","tid":"12964064","timestamp":1783441053}
+
+llama server listening at http://127.0.0.1:8000
+
+opening browser tab... (pass --nobrowser to disable)
+{"function":"server_cli","hostname":"0.0.0.0","level":"INFO","line":3269,"msg":"HTTP server listening","port":"8000","tid":"12964064","timestamp":1783441053,"url_prefix":""}
+{"function":"update_slots","level":"INFO","line":1672,"msg":"all slots are idle and system prompt is empty, clear the KV cache","tid":"12964064","timestamp":1783441053}
+failed to open http://127.0.0.1:8000/ in a browser tab using xdg-open: No such file or directory
+{"function":"log_server_request","level":"INFO","line":2842,"method":"GET","msg":"request","params":{},"path":"/v1/models","remote_addr":"127.0.0.1","remote_port":46900,"status":200,"tid":"123170969831856","timestamp":1783441053}
