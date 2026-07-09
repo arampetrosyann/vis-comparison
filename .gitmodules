@@ -7,3 +7,6 @@
 [submodule "vendor/data2vis"]
 	path = vendor/data2vis
 	url = https://github.com/victordibia/data2vis.git
+[submodule "vendor/LLM4Vis"]
+	path = vendor/LLM4Vis
+	url = https://github.com/demoleiwang/LLM4Vis.git

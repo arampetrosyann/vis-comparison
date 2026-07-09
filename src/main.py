@@ -24,6 +24,10 @@ def _load_data2vis():
     from tools.data2vis import run_data2vis
     return run_data2vis
 
+def _load_llm4vis():
+    from tools.llm4vis import run_llm4vis
+    return run_llm4vis
+
 TOOL_LOADERS = {
     "autoviz": _load_autoviz,
     "draco": _load_draco,
@@ -31,9 +35,10 @@ TOOL_LOADERS = {
     "lux": _load_lux,
     "lida": _load_lida,
     "data2vis": _load_data2vis,
+    "llm4vis": _load_llm4vis,
 }
 
-TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida", "data2vis"]
+TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida", "data2vis", "llm4vis"]
 
 def _run_tool(tool_name: str) -> bool:
     print(f"Running {tool_name.capitalize()}...\n")

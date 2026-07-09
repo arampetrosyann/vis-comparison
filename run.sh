@@ -20,5 +20,15 @@ if [ ! -d vendor/data2vis/.git ]; then
 	git clone https://github.com/victordibia/data2vis.git vendor/data2vis
 fi
 
+# LLM4Vis
+if [ ! -d vendor/LLM4Vis/.git ]; then
+    git clone https://github.com/demoleiwang/LLM4Vis.git vendor/LLM4Vis
+fi
+
+if [[ "${1}" == "llm4vis" ]]; then
+	export OPENAI_API_KEY=""
+    export OPENAI_API_BASE="https://api.openai.com/v1"
+fi
+
 # run main script
 python -m main "$@"
