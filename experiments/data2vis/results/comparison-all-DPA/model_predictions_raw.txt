@@ -1,0 +1,529 @@
+****** <class 'seq2seq.tasks.decode_text.DecodeText'>
+Decoded string
+===================
+['{"encoding": {"detail": {"type": "nominal", "selected": true, "field": "str0", "primitiveType": "string"}, "x": {"type": "quantitative", "field": "num3", "bin": true}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "line"}', '{"encoding": {"detail": {"type": "nominal", "selected": true, "field": "str0", "primitiveType": "string"}, "x": {"type": "quantitative", "field": "num5", "bin": true}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "line"}', '{"encoding": {"detail": {"type": "nominal", "selected": true, "field": "str0", "primitiveType": "string"}, "x": {"type": "quantitative", "field": "num3", "bin": true}, "y": {"aggregate": "count", "field": "*", "type": "quantitative"}}, "mark": "bar"}']
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/training/hooks.py:44: The name tf.train.SessionRunHook is deprecated. Please use tf.estimator.SessionRunHook instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/training/hooks.py:296: The name tf.train.GlobalStepWaiterHook is deprecated. Please use tf.estimator.GlobalStepWaiterHook instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:136: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:136: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:137: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/configurable.py:136: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0709 15:49:26.083540 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/configurable.py:136: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Creating ParallelTextInputPipeline in mode=infer
+I0709 15:49:26.083617 134545596943232 configurable.py:136] Creating ParallelTextInputPipeline in mode=infer
+INFO:tensorflow:
+ParallelTextInputPipeline:
+  num_epochs: 1
+  shuffle: false
+  source_delimiter: ''
+  source_files:
+  - /root/vis-comparison/src/outputs/data2vis/comparison-all-DPA/model_input.sources
+  target_delimiter: ''
+  target_files: []
+
+I0709 15:49:26.084089 134545596943232 configurable.py:137] 
+ParallelTextInputPipeline:
+  num_epochs: 1
+  shuffle: false
+  source_delimiter: ''
+  source_files:
+  - /root/vis-comparison/src/outputs/data2vis/comparison-all-DPA/model_input.sources
+  target_delimiter: ''
+  target_files: []
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:91: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0709 15:49:26.084229 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:91: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+INFO:tensorflow:Creating AttentionSeq2Seq in mode=infer
+I0709 15:49:26.085010 134545596943232 configurable.py:136] Creating AttentionSeq2Seq in mode=infer
+INFO:tensorflow:
+AttentionSeq2Seq:
+  attention.class: seq2seq.decoders.attention.AttentionLayerDot
+  attention.params:
+    num_units: 512
+  bridge.class: seq2seq.models.bridges.ZeroBridge
+  bridge.params: {}
+  decoder.class: seq2seq.decoders.AttentionDecoder
+  decoder.params:
+    max_decode_length: 2000
+    rnn_cell:
+      cell_class: LSTMCell
+      cell_params:
+        num_units: 512
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob: 1.0
+      num_layers: 2
+  embedding.dim: 512
+  embedding.init_scale: 0.04
+  embedding.share: false
+  encoder.class: seq2seq.encoders.BidirectionalRNNEncoder
+  encoder.params:
+    rnn_cell:
+      cell_class: LSTMCell
+      cell_params:
+        num_units: 512
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob: 1.0
+      num_layers: 2
+  inference.beam_search.beam_width: 3
+  inference.beam_search.choose_successors_fn: choose_top_k
+  inference.beam_search.length_penalty_weight: 0.0
+  optimizer.clip_embed_gradients: 0.1
+  optimizer.clip_gradients: 5.0
+  optimizer.learning_rate: 0.0001
+  optimizer.lr_decay_rate: 0.99
+  optimizer.lr_decay_steps: 100
+  optimizer.lr_decay_type: ''
+  optimizer.lr_min_learning_rate: 1.0e-12
+  optimizer.lr_staircase: false
+  optimizer.lr_start_decay_at: 0
+  optimizer.lr_stop_decay_at: 2147483647
+  optimizer.name: Adam
+  optimizer.params:
+    epsilon: 8.0e-07
+  optimizer.sync_replicas: 0
+  optimizer.sync_replicas_to_aggregate: 0
+  source.max_seq_len: 500
+  source.reverse: false
+  target.max_seq_len: 500
+  vocab_source: sourcedata/vocab.source
+  vocab_target: sourcedata/vocab.target
+
+I0709 15:49:26.087081 134545596943232 configurable.py:137] 
+AttentionSeq2Seq:
+  attention.class: seq2seq.decoders.attention.AttentionLayerDot
+  attention.params:
+    num_units: 512
+  bridge.class: seq2seq.models.bridges.ZeroBridge
+  bridge.params: {}
+  decoder.class: seq2seq.decoders.AttentionDecoder
+  decoder.params:
+    max_decode_length: 2000
+    rnn_cell:
+      cell_class: LSTMCell
+      cell_params:
+        num_units: 512
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob: 1.0
+      num_layers: 2
+  embedding.dim: 512
+  embedding.init_scale: 0.04
+  embedding.share: false
+  encoder.class: seq2seq.encoders.BidirectionalRNNEncoder
+  encoder.params:
+    rnn_cell:
+      cell_class: LSTMCell
+      cell_params:
+        num_units: 512
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob: 1.0
+      num_layers: 2
+  inference.beam_search.beam_width: 3
+  inference.beam_search.choose_successors_fn: choose_top_k
+  inference.beam_search.length_penalty_weight: 0.0
+  optimizer.clip_embed_gradients: 0.1
+  optimizer.clip_gradients: 5.0
+  optimizer.learning_rate: 0.0001
+  optimizer.lr_decay_rate: 0.99
+  optimizer.lr_decay_steps: 100
+  optimizer.lr_decay_type: ''
+  optimizer.lr_min_learning_rate: 1.0e-12
+  optimizer.lr_staircase: false
+  optimizer.lr_start_decay_at: 0
+  optimizer.lr_stop_decay_at: 2147483647
+  optimizer.name: Adam
+  optimizer.params:
+    epsilon: 8.0e-07
+  optimizer.sync_replicas: 0
+  optimizer.sync_replicas_to_aggregate: 0
+  source.max_seq_len: 500
+  source.reverse: false
+  target.max_seq_len: 500
+  vocab_source: sourcedata/vocab.source
+  vocab_target: sourcedata/vocab.target
+
+INFO:tensorflow:Creating DecodeText in mode=infer
+I0709 15:49:26.087605 134545596943232 configurable.py:136] Creating DecodeText in mode=infer
+INFO:tensorflow:
+DecodeText:
+  delimiter: ''
+  postproc_fn: ''
+  unk_mapping: null
+  unk_replace: false
+
+I0709 15:49:26.087866 134545596943232 configurable.py:137] 
+DecodeText:
+  delimiter: ''
+  postproc_fn: ''
+  unk_mapping: null
+  unk_replace: false
+
+INFO:tensorflow:Setting batch size to 1 for beam search.
+I0709 15:49:26.087914 134545596943232 inference.py:44] Setting batch size to 1 for beam search.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:251: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+W0709 15:49:26.087977 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:251: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/contrib/slim/python/slim/data/parallel_reader.py:246: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W0709 15:49:26.088240 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/contrib/slim/python/slim/data/parallel_reader.py:246: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:277: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W0709 15:49:26.090712 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:277: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:189: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+W0709 15:49:26.090831 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:189: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:112: RefVariable.count_up_to (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Dataset.range instead.
+W0709 15:49:26.092201 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:112: RefVariable.count_up_to (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Dataset.range instead.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/variables.py:2522: count_up_to (from tensorflow.python.ops.state_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Dataset.range instead.
+W0709 15:49:26.092272 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/variables.py:2522: count_up_to (from tensorflow.python.ops.state_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Prefer Dataset.range instead.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W0709 15:49:26.093428 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W0709 15:49:26.093839 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/contrib/slim/python/slim/data/parallel_reader.py:95: TextLineReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TextLineDataset`.
+W0709 15:49:26.096767 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/contrib/slim/python/slim/data/parallel_reader.py:95: TextLineReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TextLineDataset`.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/data/split_tokens_decoder.py:54: calling string_split (from tensorflow.python.ops.ragged.ragged_string_ops) with delimiter is deprecated and will be removed in a future version.
+Instructions for updating:
+delimiter is deprecated, please use sep instead.
+W0709 15:49:26.098117 134545596943232 deprecation.py:506] From /root/vis-comparison/vendor/data2vis/seq2seq/data/split_tokens_decoder.py:54: calling string_split (from tensorflow.python.ops.ragged.ragged_string_ops) with delimiter is deprecated and will be removed in a future version.
+Instructions for updating:
+delimiter is deprecated, please use sep instead.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:274: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+W0709 15:49:26.100052 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:274: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/data/vocab.py:77: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+W0709 15:49:26.103204 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/data/vocab.py:77: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+INFO:tensorflow:Creating vocabulary lookup table of size 88
+I0709 15:49:26.103602 134545596943232 vocab.py:102] Creating vocabulary lookup table of size 88
+INFO:tensorflow:Creating vocabulary lookup table of size 46
+I0709 15:49:26.107302 134545596943232 vocab.py:102] Creating vocabulary lookup table of size 46
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/graph_utils.py:55: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+W0709 15:49:26.110660 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/graph_utils.py:55: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:236: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0709 15:49:26.112289 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:236: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:237: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+W0709 15:49:26.112409 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:237: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:237: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0709 15:49:26.112458 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:237: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/graph_utils.py:37: The name tf.make_template is deprecated. Please use tf.compat.v1.make_template instead.
+
+W0709 15:49:26.113176 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/graph_utils.py:37: The name tf.make_template is deprecated. Please use tf.compat.v1.make_template instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:131: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+W0709 15:49:26.114044 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:131: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+INFO:tensorflow:Creating BidirectionalRNNEncoder in mode=infer
+I0709 15:49:26.118569 134545596943232 configurable.py:136] Creating BidirectionalRNNEncoder in mode=infer
+INFO:tensorflow:
+BidirectionalRNNEncoder:
+  init_scale: 0.04
+  rnn_cell:
+    cell_class: LSTMCell
+    cell_params:
+      num_units: 512
+    dropout_input_keep_prob: 0.5
+    dropout_output_keep_prob: 1.0
+    num_layers: 2
+    residual_combiner: add
+    residual_connections: false
+    residual_dense: false
+
+I0709 15:49:26.119144 134545596943232 configurable.py:137] 
+BidirectionalRNNEncoder:
+  init_scale: 0.04
+  rnn_cell:
+    cell_class: LSTMCell
+    cell_params:
+      num_units: 512
+    dropout_input_keep_prob: 0.5
+    dropout_output_keep_prob: 1.0
+    num_layers: 2
+    residual_combiner: add
+    residual_connections: false
+    residual_dense: false
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/encoders/rnn_encoder.py:130: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+W0709 15:49:26.119299 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/encoders/rnn_encoder.py:130: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:118: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+W0709 15:49:26.119507 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/training/utils.py:118: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/contrib/rnn_cell.py:67: MultiRNNCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.StackedRNNCells, and will be replaced by that in Tensorflow 2.0.
+W0709 15:49:26.120068 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/contrib/rnn_cell.py:67: MultiRNNCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.StackedRNNCells, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/encoders/rnn_encoder.py:143: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+W0709 15:49:26.120763 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/encoders/rnn_encoder.py:143: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+W0709 15:49:26.120906 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:958: Layer.add_variable (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.add_weight` method instead.
+W0709 15:49:26.156582 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:958: Layer.add_variable (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.add_weight` method instead.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:962: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+W0709 15:49:26.160008 134545596943232 deprecation.py:506] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:962: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:244: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0709 15:49:26.178317 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:244: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+INFO:tensorflow:Creating AttentionLayerDot in mode=infer
+I0709 15:49:26.254105 134545596943232 configurable.py:136] Creating AttentionLayerDot in mode=infer
+INFO:tensorflow:
+AttentionLayerDot:
+  num_units: 512
+
+I0709 15:49:26.254396 134545596943232 configurable.py:137] 
+AttentionLayerDot:
+  num_units: 512
+
+INFO:tensorflow:Creating AttentionDecoder in mode=infer
+I0709 15:49:26.254696 134545596943232 configurable.py:136] Creating AttentionDecoder in mode=infer
+INFO:tensorflow:
+AttentionDecoder:
+  init_scale: 0.04
+  max_decode_length: 2000
+  rnn_cell:
+    cell_class: LSTMCell
+    cell_params:
+      num_units: 512
+    dropout_input_keep_prob: 0.5
+    dropout_output_keep_prob: 1.0
+    num_layers: 2
+    residual_combiner: add
+    residual_connections: false
+    residual_dense: false
+
+I0709 15:49:26.255226 134545596943232 configurable.py:137] 
+AttentionDecoder:
+  init_scale: 0.04
+  max_decode_length: 2000
+  rnn_cell:
+    cell_class: LSTMCell
+    cell_params:
+      num_units: 512
+    dropout_input_keep_prob: 0.5
+    dropout_output_keep_prob: 1.0
+    num_layers: 2
+    residual_combiner: add
+    residual_connections: false
+    residual_dense: false
+
+INFO:tensorflow:Creating BeamSearchDecoder in mode=infer
+I0709 15:49:26.256060 134545596943232 configurable.py:136] Creating BeamSearchDecoder in mode=infer
+INFO:tensorflow:
+BeamSearchDecoder:
+  init_scale: 0.04
+  max_decode_length: 2000
+  rnn_cell:
+    cell_class: LSTMCell
+    cell_params:
+      num_units: 512
+    dropout_input_keep_prob: 1.0
+    dropout_output_keep_prob: 1.0
+    num_layers: 2
+    residual_combiner: add
+    residual_connections: false
+    residual_dense: false
+
+I0709 15:49:26.256637 134545596943232 configurable.py:137] 
+BeamSearchDecoder:
+  init_scale: 0.04
+  max_decode_length: 2000
+  rnn_cell:
+    cell_class: LSTMCell
+    cell_params:
+      num_units: 512
+    dropout_input_keep_prob: 1.0
+    dropout_output_keep_prob: 1.0
+    num_layers: 2
+    residual_combiner: add
+    residual_connections: false
+    residual_dense: false
+
+INFO:tensorflow:Creating ZeroBridge in mode=infer
+I0709 15:49:26.257184 134545596943232 configurable.py:136] Creating ZeroBridge in mode=infer
+INFO:tensorflow:
+ZeroBridge: {}
+
+I0709 15:49:26.257310 134545596943232 configurable.py:137] 
+ZeroBridge: {}
+
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1866: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W0709 15:49:26.343973 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1866: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/inference/beam_search.py:127: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+W0709 15:49:26.410025 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/inference/beam_search.py:127: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/inference/beam_search.py:252: The name tf.mod is deprecated. Please use tf.math.mod instead.
+
+W0709 15:49:26.416139 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/inference/beam_search.py:252: The name tf.mod is deprecated. Please use tf.math.mod instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/inference/beam_search.py:91: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+W0709 15:49:26.459193 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/inference/beam_search.py:91: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/graph_utils.py:70: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+W0709 15:49:26.483458 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/graph_utils.py:70: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:114: to_int64 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0709 15:49:26.483557 134545596943232 deprecation.py:323] From /root/vis-comparison/vendor/data2vis/seq2seq/models/seq2seq_model.py:114: to_int64 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:116: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+W0709 15:49:26.484235 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/bin/infer.py:116: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:125: The name tf.train.Scaffold is deprecated. Please use tf.compat.v1.train.Scaffold instead.
+
+W0709 15:49:26.495073 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/bin/infer.py:125: The name tf.train.Scaffold is deprecated. Please use tf.compat.v1.train.Scaffold instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:126: The name tf.train.ChiefSessionCreator is deprecated. Please use tf.compat.v1.train.ChiefSessionCreator instead.
+
+W0709 15:49:26.495172 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/bin/infer.py:126: The name tf.train.ChiefSessionCreator is deprecated. Please use tf.compat.v1.train.ChiefSessionCreator instead.
+
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/bin/infer.py:127: The name tf.train.MonitoredSession is deprecated. Please use tf.compat.v1.train.MonitoredSession instead.
+
+W0709 15:49:26.495225 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/bin/infer.py:127: The name tf.train.MonitoredSession is deprecated. Please use tf.compat.v1.train.MonitoredSession instead.
+
+INFO:tensorflow:Graph was finalized.
+I0709 15:49:26.535085 134545596943232 monitored_session.py:240] Graph was finalized.
+2026-07-09 15:49:26.535341: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2026-07-09 15:49:26.538010: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2900000000 Hz
+2026-07-09 15:49:26.538172: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5a66a025b470 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2026-07-09 15:49:26.538187: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+INFO:tensorflow:Restoring parameters from /root/vis-comparison/vendor/data2vis/vizmodel/model.ckpt-20000
+I0709 15:49:26.610472 134545596943232 saver.py:1284] Restoring parameters from /root/vis-comparison/vendor/data2vis/vizmodel/model.ckpt-20000
+INFO:tensorflow:Restored model from /root/vis-comparison/vendor/data2vis/vizmodel/model.ckpt-20000
+I0709 15:49:26.677548 134545596943232 infer.py:123] Restored model from /root/vis-comparison/vendor/data2vis/vizmodel/model.ckpt-20000
+INFO:tensorflow:Running local_init_op.
+I0709 15:49:26.702146 134545596943232 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0709 15:49:26.718011 134545596943232 session_manager.py:502] Done running local_init_op.
+WARNING:tensorflow:From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py:882: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W0709 15:49:26.741907 134545596943232 deprecation.py:323] From /root/vis-comparison/.venv/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py:882: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/vis-comparison/vendor/data2vis/seq2seq/tasks/decode_text.py:152: The name tf.train.SessionRunArgs is deprecated. Please use tf.estimator.SessionRunArgs instead.
+
+W0709 15:49:26.744519 134545596943232 module_wrapper.py:139] From /root/vis-comparison/vendor/data2vis/seq2seq/tasks/decode_text.py:152: The name tf.train.SessionRunArgs is deprecated. Please use tf.estimator.SessionRunArgs instead.
+

@@ -4,3 +4,6 @@
 [submodule "vendor/DeepEye"]
 	path = vendor/DeepEye
 	url = https://github.com/Thanksyy/DeepEye-APIs.git
+[submodule "vendor/data2vis"]
+	path = vendor/data2vis
+	url = https://github.com/victordibia/data2vis.git

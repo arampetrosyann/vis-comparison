@@ -20,15 +20,20 @@ def _load_lida():
     from tools.lida import run_lida
     return run_lida
 
+def _load_data2vis():
+    from tools.data2vis import run_data2vis
+    return run_data2vis
+
 TOOL_LOADERS = {
     "autoviz": _load_autoviz,
     "draco": _load_draco,
     "deepeye": _load_deepeye,
     "lux": _load_lux,
     "lida": _load_lida,
+    "data2vis": _load_data2vis,
 }
 
-TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida"]
+TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida", "data2vis"]
 
 def _run_tool(tool_name: str) -> bool:
     print(f"Running {tool_name.capitalize()}...\n")

@@ -15,5 +15,10 @@ if [ ! -d vendor/DeepEye/.git ]; then
 	git clone https://github.com/Thanksyy/DeepEye-APIs.git vendor/DeepEye
 fi
 
+# Data2Vis
+if [ ! -d vendor/data2vis/.git ]; then
+	git clone https://github.com/victordibia/data2vis.git vendor/data2vis
+fi
+
 # run main script
 python -m main "$@"
