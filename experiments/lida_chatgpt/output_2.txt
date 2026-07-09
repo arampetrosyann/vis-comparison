@@ -1,0 +1,31 @@
+Obtaining file:///root/vis-comparison
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: vis-comparison
+  Building editable for vis-comparison (pyproject.toml): started
+  Building editable for vis-comparison (pyproject.toml): finished with status 'done'
+  Created wheel for vis-comparison: filename=vis_comparison-0.1.0-0.editable-py3-none-any.whl size=2790 sha256=8c34d15d5bd1746bf03fb6f780ddd313a83c5c89462d228bd572608fba384bf2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-p2bmxx6s/wheels/70/3b/a2/0e64470a4ecd138a2d36fda480b58a6e0e0e5d8e339d807a8d
+Successfully built vis-comparison
+Installing collected packages: vis-comparison
+  Attempting uninstall: vis-comparison
+    Found existing installation: vis-comparison 0.1.0
+    Uninstalling vis-comparison-0.1.0:
+      Successfully uninstalled vis-comparison-0.1.0
+Successfully installed vis-comparison-0.1.0
+Starting!!!
+
+Running Lida...
+
+Running LIDA for src/data/comparison-all-DPA.csv...
+
+Running LIDA for src/data/iplookup-cpu.csv...
+
+Running LIDA for src/data/scalability-energy-crc-TIME.csv...
+

@@ -1,0 +1,152 @@
+Obtaining file:///root/vis-comparison
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: vis-comparison
+  Building editable for vis-comparison (pyproject.toml): started
+  Building editable for vis-comparison (pyproject.toml): finished with status 'done'
+  Created wheel for vis-comparison: filename=vis_comparison-0.1.0-0.editable-py3-none-any.whl size=2790 sha256=7696015aa32ad1963fb593a729ea9ff0282bc3cf5243453e45bd53b4a4c0c521
+  Stored in directory: /tmp/pip-ephem-wheel-cache-fail_zhl/wheels/70/3b/a2/0e64470a4ecd138a2d36fda480b58a6e0e0e5d8e339d807a8d
+Successfully built vis-comparison
+Installing collected packages: vis-comparison
+  Attempting uninstall: vis-comparison
+    Found existing installation: vis-comparison 0.1.0
+    Uninstalling vis-comparison-0.1.0:
+      Successfully uninstalled vis-comparison-0.1.0
+Successfully installed vis-comparison-0.1.0
+<string>:7: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+<string>:9: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<string>:8: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<string>:7: FutureWarning: 
+
+The `ci` parameter is deprecated. Use `errorbar=None` for the same effect.
+
+<string>:6: FutureWarning: 
+
+The `ci` parameter is deprecated. Use `errorbar=None` for the same effect.
+
+<string>:6: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+<string>:8: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<string>:7: FutureWarning: 
+
+The `ci` parameter is deprecated. Use `errorbar=None` for the same effect.
+
+<string>:7: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+<string>:6: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+<string>:6: UserWarning: Ignoring `palette` because no `hue` variable has been assigned.
+<string>:8: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+Starting!!!
+
+Running Lida...
+
+Running LIDA for src/data/comparison-all-DPA.csv...
+
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# solution plan
+# i. Create a bar chart of SIZE grouped by build
+sns.barplot(x='build', y='SIZE', data=data, palette='viridis')
+plt.title('What is the distribution of test sizes across different builds?', wrap=True)
+plt.legend(title='SIZE')
+plt.xlabel('Build')
+plt.ylabel('SIZE')
+plt.xticks(rotation=45)
+```
+****
+ name 'plot' is not defined
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# solution plan
+# i. Create a bar chart of y_RX-GOODPUT-GBPS-PKTGEN grouped by run_index
+sns.barplot(data=data, x='run_index', y='y_RX-GOODPUT-GBPS-PKTGEN', ci=None)
+plt.title('What is the goodput rate in Gbps for each test run?', wrap=True)
+plt.legend(title='Run Index', labels=data['run_index'].unique())
+```
+****
+ name 'plot' is not defined
+Running LIDA for src/data/iplookup-cpu.csv...
+
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# solution plan
+# i. Create a histogram of the 'RX-RATE-PPS' field to show its distribution
+sns.histplot(data=data, x='RX-RATE-PPS', kde=True, color='skyblue', legend=True)
+plt.axvline(data['RX-RATE-PPS'].mean(), color='red', linestyle='dashed', linewidth=1, label=f'Mean: {data["RX-RATE-PPS"].mean():.2f}')
+plt.xlabel('RX-RATE-PPS')
+plt.ylabel('Frequency')
+plt.legend()
+plt.title('What is the distribution of RX-RATE-PPS?', wrap=True)
+
+return plt;
+```
+****
+ 'return' outside function (<string>, line 14)
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# solution plan
+# i. Create a bar chart of AVG-LAT by SIZE category
+sns.barplot(x='SIZE', y='AVG-LAT', data=data, ci=None, palette='viridis')
+plt.title('What is the average AVG-LAT for each SIZE category?', wrap=True)
+plt.legend(title='SIZE', loc='upper right', labels=data['SIZE'].unique())
+```
+****
+ name 'plot' is not defined
+Running LIDA for src/data/scalability-energy-crc-TIME.csv...
+
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# solution plan
+# i. Create a new DataFrame with the sum of power consumption for each power source
+power_sources = ['y_GPU-POWER', 'y_IPMI-POWER', 'y_RAPL-POWER', 'y_PDU-POWER']
+power_consumption = data[power_sources].sum()
+
+# ii. Plot a stacked bar chart of power consumption by different power sources
+plt.figure(figsize=(12, 6))
+sns.barplot(x=power_consumption.index, y=power_consumption, palette='viridis')
+plt.xlabel('Power Sources')
+plt.ylabel('Total Power Consumption')
+plt.legend(title='Power Sources', labels=power_sources)
+
+# iii. Add a horizontal line for the total power consumption
+total_power = power_consumption.sum()
+plt.axhline(y=total_power, color='red', linestyle='--', label=f'Total Power: {total_power:.2f}')
+plt.legend()
+
+plt.title('What is the power consumption distribution across different power sources (GPU, IPMI, RAPL, PDU)?', wrap=True)
+
+return plt
+```
+****
+ 'return' outside function (<string>, line 24)
