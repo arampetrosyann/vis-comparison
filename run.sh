@@ -25,6 +25,11 @@ if [ ! -d vendor/LLM4Vis/.git ]; then
     git clone https://github.com/demoleiwang/LLM4Vis.git vendor/LLM4Vis
 fi
 
+# Table2Charts
+if [ ! -d vendor/Table2Charts/.git ]; then
+    git clone https://github.com/microsoft/Table2Charts.git vendor/Table2Charts
+fi
+
 if [[ "${1}" == "llm4vis" ]]; then
 	export OPENAI_API_KEY=""
     export OPENAI_API_BASE="https://api.openai.com/v1"

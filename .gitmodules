@@ -10,3 +10,6 @@
 [submodule "vendor/LLM4Vis"]
 	path = vendor/LLM4Vis
 	url = https://github.com/demoleiwang/LLM4Vis.git
+[submodule "vendor/Table2Charts"]
+	path = vendor/Table2Charts
+	url = https://github.com/microsoft/Table2Charts.git

@@ -28,6 +28,10 @@ def _load_llm4vis():
     from tools.llm4vis import run_llm4vis
     return run_llm4vis
 
+def _load_table2charts():
+    from tools.table2charts import run_table2charts
+    return run_table2charts
+
 TOOL_LOADERS = {
     "autoviz": _load_autoviz,
     "draco": _load_draco,
@@ -36,9 +40,10 @@ TOOL_LOADERS = {
     "lida": _load_lida,
     "data2vis": _load_data2vis,
     "llm4vis": _load_llm4vis,
+    "table2charts": _load_table2charts,
 }
 
-TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida", "data2vis", "llm4vis"]
+TOOL_ORDER = ["autoviz", "draco", "deepeye", "lux", "lida", "data2vis", "llm4vis", "table2charts"]
 
 def _run_tool(tool_name: str) -> bool:
     print(f"Running {tool_name.capitalize()}...\n")
