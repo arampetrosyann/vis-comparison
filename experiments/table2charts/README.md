@@ -1,0 +1,3 @@
+# Table2Charts
+
+The repo contains only the model and training scripts. In addition, it accepts a specific input format for generating recommendations and there is not untility function to parse files. Thus, the method [here](https://github.com/microsoft/Table2Charts/blob/main/Table2Charts/single_inference.py) is used to generate recommendations for __example data__ available in the repo. This is done just to obtain the actual output from the system.
