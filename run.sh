@@ -7,7 +7,10 @@ pip install -e '.[dev]'
 if [ ! -d vendor/AutoViz/.git ]; then
 	git clone https://github.com/AutoViML/AutoViz.git vendor/AutoViz
 fi
-pip install -e ./vendor/AutoViz
+
+if [[ "${1}" == "autoviz" ]]; then
+	pip install -e ./vendor/AutoViz
+fi
 
 # DeepEye APIs
 if [ ! -d vendor/DeepEye/.git ]; then
@@ -30,7 +33,7 @@ if [ ! -d vendor/Table2Charts/.git ]; then
 fi
 
 if [[ "${1}" == "llm4vis" ]]; then
-	export OPENAI_API_KEY=""
+	export OPENAI_API_KEY="" # set your OpenAI API key here
     export OPENAI_API_BASE="https://api.openai.com/v1"
 fi
 
