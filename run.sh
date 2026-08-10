@@ -32,6 +32,11 @@ if [ ! -d vendor/Table2Charts/.git ]; then
     git clone https://github.com/microsoft/Table2Charts.git vendor/Table2Charts
 fi
 
+# Draco2
+if [ ! -d vendor/draco2/.git ]; then
+    git clone https://github.com/cmudig/draco2.git vendor/draco2
+fi
+
 if [[ "${1}" == "llm4vis" ]]; then
 	export OPENAI_API_KEY="" # set your OpenAI API key here
     export OPENAI_API_BASE="https://api.openai.com/v1"

@@ -13,3 +13,6 @@
 [submodule "vendor/Table2Charts"]
 	path = vendor/Table2Charts
 	url = https://github.com/microsoft/Table2Charts.git
+[submodule "vendor/draco2"]
+	path = vendor/draco2
+	url = https://github.com/cmudig/draco2.git
