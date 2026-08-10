@@ -20,7 +20,7 @@ def run_autoviz(data_dir: str = "src/data"):
 			sep=",",
 			depVar="",
 			verbose=2,
-			chart_format="png",
+			chart_format="svg",
 			save_plot_dir=str(output_dir),
 		)
 		
