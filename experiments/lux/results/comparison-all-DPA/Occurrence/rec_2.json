@@ -1,0 +1,92 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "mark": {
+      "tooltip": {
+        "content": "encoding"
+      }
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-002d00c038e5ac72cefe0bfdf5d6470c"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "Number of Records"
+      },
+      "field": "Record",
+      "title": "Number of Records",
+      "type": "quantitative"
+    },
+    "y": {
+      "axis": {
+        "labelOverlap": true,
+        "title": "NTHREADS"
+      },
+      "field": "NTHREADS",
+      "sort": "-x",
+      "type": "nominal"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-002d00c038e5ac72cefe0bfdf5d6470c": [
+      {
+        "NTHREADS": 16,
+        "Record": 60
+      },
+      {
+        "NTHREADS": 32,
+        "Record": 60
+      },
+      {
+        "NTHREADS": 64,
+        "Record": 60
+      },
+      {
+        "NTHREADS": 128,
+        "Record": 60
+      },
+      {
+        "NTHREADS": 190,
+        "Record": 60
+      },
+      {
+        "NTHREADS": 254,
+        "Record": 60
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

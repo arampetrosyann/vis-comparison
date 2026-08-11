@@ -1,0 +1,390 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "mark": {
+      "tooltip": {
+        "content": "encoding"
+      }
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-30145053493fd74f0e0f80c5f3e7e6f3"
+  },
+  "mark": {
+    "type": "circle"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "RX-GOODPUT-GBPS-PKTGEN"
+      },
+      "field": "RX-GOODPUT-GBPS-PKTGEN",
+      "scale": {
+        "domain": [
+          6.0,
+          99.0
+        ]
+      },
+      "type": "quantitative"
+    },
+    "y": {
+      "axis": {
+        "title": "RX-RATE-MBPS"
+      },
+      "field": "RX-RATE-MBPS",
+      "scale": {
+        "domain": [
+          6334.2364064,
+          97324.5755168
+        ]
+      },
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "params": [
+    {
+      "name": "param_1e9efca18e7a2868",
+      "select": {
+        "type": "interval",
+        "encodings": [
+          "x",
+          "y"
+        ]
+      },
+      "bind": "scales"
+    }
+  ],
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-30145053493fd74f0e0f80c5f3e7e6f3": [
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 6.0,
+        "RX-RATE-MBPS": 6364.6310304
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 6.0,
+        "RX-RATE-MBPS": 6334.2364064
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 6.0,
+        "RX-RATE-MBPS": 6384.0341472
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 11.0,
+        "RX-RATE-MBPS": 11025.4070752
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 11.0,
+        "RX-RATE-MBPS": 11026.9026848
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 11.0,
+        "RX-RATE-MBPS": 11020.557296
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 21.0,
+        "RX-RATE-MBPS": 20647.105632
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 21.0,
+        "RX-RATE-MBPS": 20678.4747072
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 21.0,
+        "RX-RATE-MBPS": 20678.9868512
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 40.0,
+        "RX-RATE-MBPS": 39639.772736
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 40.0,
+        "RX-RATE-MBPS": 39679.4267776
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 40.0,
+        "RX-RATE-MBPS": 39653.7999712
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 77.0,
+        "RX-RATE-MBPS": 76139.96152
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 77.0,
+        "RX-RATE-MBPS": 75924.5450688
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 77.0,
+        "RX-RATE-MBPS": 75989.4347232
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 11.0,
+        "RX-RATE-MBPS": 11186.6864256
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 11.0,
+        "RX-RATE-MBPS": 11051.315184
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 11.0,
+        "RX-RATE-MBPS": 11192.5763808
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 19.0,
+        "RX-RATE-MBPS": 19623.1055584
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 20.0,
+        "RX-RATE-MBPS": 19669.3191136
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 20.0,
+        "RX-RATE-MBPS": 19692.768384
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 37.0,
+        "RX-RATE-MBPS": 36329.0252864
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 37.0,
+        "RX-RATE-MBPS": 36364.052
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 37.0,
+        "RX-RATE-MBPS": 36409.9075584
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 70.0,
+        "RX-RATE-MBPS": 69623.0040576
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 71.0,
+        "RX-RATE-MBPS": 69738.9435008
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 70.0,
+        "RX-RATE-MBPS": 69608.784688
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 95.0,
+        "RX-RATE-MBPS": 94365.2156288
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 96.0,
+        "RX-RATE-MBPS": 94188.3312064
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 95.0,
+        "RX-RATE-MBPS": 94279.7230304
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 18.0,
+        "RX-RATE-MBPS": 18446.7804896
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 19.0,
+        "RX-RATE-MBPS": 19240.7258016
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 19.0,
+        "RX-RATE-MBPS": 19177.0398048
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 35.0,
+        "RX-RATE-MBPS": 34354.3107296
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 32.0,
+        "RX-RATE-MBPS": 32323.2111936
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 35.0,
+        "RX-RATE-MBPS": 34455.6644512
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 63.0,
+        "RX-RATE-MBPS": 62126.685024
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 62.0,
+        "RX-RATE-MBPS": 61697.8490784
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 62.0,
+        "RX-RATE-MBPS": 61700.4879904
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 76.0,
+        "RX-RATE-MBPS": 75678.3234752
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 78.0,
+        "RX-RATE-MBPS": 77152.432928
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 76.0,
+        "RX-RATE-MBPS": 75788.2770464
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 96.0,
+        "RX-RATE-MBPS": 94801.4285472
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 95.0,
+        "RX-RATE-MBPS": 94270.4878592
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 96.0,
+        "RX-RATE-MBPS": 94860.097376
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 17.0,
+        "RX-RATE-MBPS": 16899.5444192
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 17.0,
+        "RX-RATE-MBPS": 16871.5548864
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 18.0,
+        "RX-RATE-MBPS": 18001.6897952
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 26.0,
+        "RX-RATE-MBPS": 25836.7188128
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 29.0,
+        "RX-RATE-MBPS": 28592.6216032
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 30.0,
+        "RX-RATE-MBPS": 30126.7163232
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 54.0,
+        "RX-RATE-MBPS": 53434.7459872
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 55.0,
+        "RX-RATE-MBPS": 54852.6623168
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 51.0,
+        "RX-RATE-MBPS": 50107.6653408
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 79.0,
+        "RX-RATE-MBPS": 78026.2002272
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 79.0,
+        "RX-RATE-MBPS": 78007.2249312
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 79.0,
+        "RX-RATE-MBPS": 78361.8688
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 99.0,
+        "RX-RATE-MBPS": 97001.9747264
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 99.0,
+        "RX-RATE-MBPS": 97324.5755168
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 99.0,
+        "RX-RATE-MBPS": 97287.1805088
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 18.0,
+        "RX-RATE-MBPS": 18236.591616
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 17.0,
+        "RX-RATE-MBPS": 16829.9311296
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 17.0,
+        "RX-RATE-MBPS": 16922.222624
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 32.0,
+        "RX-RATE-MBPS": 31507.1332352
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 32.0,
+        "RX-RATE-MBPS": 31516.495904
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 29.0,
+        "RX-RATE-MBPS": 29309.6184416
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 58.0,
+        "RX-RATE-MBPS": 57262.4011968
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 58.0,
+        "RX-RATE-MBPS": 57074.5928576
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 54.0,
+        "RX-RATE-MBPS": 53608.6661376
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 79.0,
+        "RX-RATE-MBPS": 77990.1316064
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 79.0,
+        "RX-RATE-MBPS": 77802.6027584
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 79.0,
+        "RX-RATE-MBPS": 78090.4313184
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 99.0,
+        "RX-RATE-MBPS": 97266.867232
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 99.0,
+        "RX-RATE-MBPS": 97280.1235552
+      },
+      {
+        "RX-GOODPUT-GBPS-PKTGEN": 99.0,
+        "RX-RATE-MBPS": 97322.0632352
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

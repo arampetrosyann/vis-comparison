@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-7288a957648a52510973c116d1251c5c"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "y_RX-RATE-PPS (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 6711607.8
+      },
+      "field": "y_RX-RATE-PPS",
+      "scale": {
+        "domain": [
+          6913.0,
+          67122991.0
+        ]
+      },
+      "title": "y_RX-RATE-PPS (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "y_RX-RATE-PPS_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-7288a957648a52510973c116d1251c5c": [
+      {
+        "y_RX-RATE-PPS": 6913.0,
+        "Number of Records": 243.0,
+        "y_RX-RATE-PPS_end": 7054101.19
+      },
+      {
+        "y_RX-RATE-PPS": 6718520.8,
+        "Number of Records": 46.0,
+        "y_RX-RATE-PPS_end": 13765708.99
+      },
+      {
+        "y_RX-RATE-PPS": 13430128.6,
+        "Number of Records": 7.0,
+        "y_RX-RATE-PPS_end": 20477316.79
+      },
+      {
+        "y_RX-RATE-PPS": 20141736.4,
+        "Number of Records": 27.0,
+        "y_RX-RATE-PPS_end": 27188924.59
+      },
+      {
+        "y_RX-RATE-PPS": 26853344.2,
+        "Number of Records": 4.0,
+        "y_RX-RATE-PPS_end": 33900532.39
+      },
+      {
+        "y_RX-RATE-PPS": 33564952.0,
+        "Number of Records": 4.0,
+        "y_RX-RATE-PPS_end": 40612140.19
+      },
+      {
+        "y_RX-RATE-PPS": 40276559.8,
+        "Number of Records": 15.0,
+        "y_RX-RATE-PPS_end": 47323747.989999995
+      },
+      {
+        "y_RX-RATE-PPS": 46988167.6,
+        "Number of Records": 0.0,
+        "y_RX-RATE-PPS_end": 54035355.79
+      },
+      {
+        "y_RX-RATE-PPS": 53699775.4,
+        "Number of Records": 5.0,
+        "y_RX-RATE-PPS_end": 60746963.589999996
+      },
+      {
+        "y_RX-RATE-PPS": 60411383.199999996,
+        "Number of Records": 9.0,
+        "y_RX-RATE-PPS_end": 67458571.39
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

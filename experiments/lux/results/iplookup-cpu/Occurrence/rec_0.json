@@ -1,0 +1,87 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "mark": {
+      "tooltip": {
+        "content": "encoding"
+      }
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-0bcdd1726ca09d8b35ff4a39419fb25c"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "Number of Records"
+      },
+      "field": "Record",
+      "title": "Number of Records",
+      "type": "quantitative"
+    },
+    "y": {
+      "axis": {
+        "labelOverlap": true,
+        "title": "SIZE"
+      },
+      "field": "SIZE",
+      "type": "nominal"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-0bcdd1726ca09d8b35ff4a39419fb25c": [
+      {
+        "SIZE": 64,
+        "Record": 15
+      },
+      {
+        "SIZE": 128,
+        "Record": 15
+      },
+      {
+        "SIZE": 256,
+        "Record": 15
+      },
+      {
+        "SIZE": 512,
+        "Record": 15
+      },
+      {
+        "SIZE": 1024,
+        "Record": 15
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

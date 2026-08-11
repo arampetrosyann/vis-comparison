@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-5f90ad68a106ac8f820badddf65711c8"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "y_PDU-POWER (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 12.417599999999993
+      },
+      "field": "y_PDU-POWER",
+      "scale": {
+        "domain": [
+          309.186,
+          433.362
+        ]
+      },
+      "title": "y_PDU-POWER (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "y_PDU-POWER_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-5f90ad68a106ac8f820badddf65711c8": [
+      {
+        "y_PDU-POWER": 309.186,
+        "Number of Records": 48.0,
+        "y_PDU-POWER_end": 322.226
+      },
+      {
+        "y_PDU-POWER": 321.6036,
+        "Number of Records": 420.0,
+        "y_PDU-POWER_end": 334.6436
+      },
+      {
+        "y_PDU-POWER": 334.02119999999996,
+        "Number of Records": 1769.0,
+        "y_PDU-POWER_end": 347.0612
+      },
+      {
+        "y_PDU-POWER": 346.4388,
+        "Number of Records": 4606.0,
+        "y_PDU-POWER_end": 359.47880000000004
+      },
+      {
+        "y_PDU-POWER": 358.8564,
+        "Number of Records": 6488.0,
+        "y_PDU-POWER_end": 371.8964
+      },
+      {
+        "y_PDU-POWER": 371.274,
+        "Number of Records": 4591.0,
+        "y_PDU-POWER_end": 384.314
+      },
+      {
+        "y_PDU-POWER": 383.6916,
+        "Number of Records": 3126.0,
+        "y_PDU-POWER_end": 396.7316
+      },
+      {
+        "y_PDU-POWER": 396.1092,
+        "Number of Records": 1096.0,
+        "y_PDU-POWER_end": 409.1492
+      },
+      {
+        "y_PDU-POWER": 408.5268,
+        "Number of Records": 376.0,
+        "y_PDU-POWER_end": 421.5668
+      },
+      {
+        "y_PDU-POWER": 420.94440000000003,
+        "Number of Records": 27.0,
+        "y_PDU-POWER_end": 433.98440000000005
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

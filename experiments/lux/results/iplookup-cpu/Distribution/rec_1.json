@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-ae4f6fa634c55ceb2679db4ef40ba9d2"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "AVG-LAT (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 0.00013421967592592887
+      },
+      "field": "AVG-LAT",
+      "scale": {
+        "domain": [
+          6.5829861111111e-05,
+          0.0014080266203704
+        ]
+      },
+      "title": "AVG-LAT (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "AVG-LAT_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-ae4f6fa634c55ceb2679db4ef40ba9d2": [
+      {
+        "AVG-LAT": 6.5829861111111e-05,
+        "Number of Records": 1.0,
+        "AVG-LAT_end": 0.00027970713534391806
+      },
+      {
+        "AVG-LAT": 0.0002000495370370399,
+        "Number of Records": 16.0,
+        "AVG-LAT_end": 0.000413926811269847
+      },
+      {
+        "AVG-LAT": 0.0003342692129629688,
+        "Number of Records": 20.0,
+        "AVG-LAT_end": 0.0005481464871957759
+      },
+      {
+        "AVG-LAT": 0.0004684888888888977,
+        "Number of Records": 19.0,
+        "AVG-LAT_end": 0.0006823661631217047
+      },
+      {
+        "AVG-LAT": 0.0006027085648148266,
+        "Number of Records": 7.0,
+        "AVG-LAT_end": 0.0008165858390476337
+      },
+      {
+        "AVG-LAT": 0.0007369282407407555,
+        "Number of Records": 4.0,
+        "AVG-LAT_end": 0.0009508055149735626
+      },
+      {
+        "AVG-LAT": 0.0008711479166666844,
+        "Number of Records": 0.0,
+        "AVG-LAT_end": 0.0010850251908994914
+      },
+      {
+        "AVG-LAT": 0.0010053675925926133,
+        "Number of Records": 1.0,
+        "AVG-LAT_end": 0.0012192448668254204
+      },
+      {
+        "AVG-LAT": 0.001139587268518542,
+        "Number of Records": 4.0,
+        "AVG-LAT_end": 0.0013534645427513493
+      },
+      {
+        "AVG-LAT": 0.001273806944444471,
+        "Number of Records": 3.0,
+        "AVG-LAT_end": 0.001487684218677278
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

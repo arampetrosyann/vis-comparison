@@ -1,0 +1,112 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "mark": {
+      "tooltip": {
+        "content": "encoding"
+      }
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-c8851e0332634f1f40db2fc371c2f5c9"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "Number of Records"
+      },
+      "field": "Record",
+      "title": "Number of Records",
+      "type": "quantitative"
+    },
+    "y": {
+      "axis": {
+        "labelOverlap": true,
+        "title": "y_IPMI-POWER"
+      },
+      "field": "y_IPMI-POWER",
+      "sort": "-x",
+      "type": "nominal"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-c8851e0332634f1f40db2fc371c2f5c9": [
+      {
+        "y_IPMI-POWER": 324.0,
+        "Record": 90
+      },
+      {
+        "y_IPMI-POWER": 336.0,
+        "Record": 469
+      },
+      {
+        "y_IPMI-POWER": 348.0,
+        "Record": 2536
+      },
+      {
+        "y_IPMI-POWER": 360.0,
+        "Record": 6572
+      },
+      {
+        "y_IPMI-POWER": 372.0,
+        "Record": 5496
+      },
+      {
+        "y_IPMI-POWER": 384.0,
+        "Record": 4340
+      },
+      {
+        "y_IPMI-POWER": 396.0,
+        "Record": 2127
+      },
+      {
+        "y_IPMI-POWER": 408.0,
+        "Record": 589
+      },
+      {
+        "y_IPMI-POWER": 420.0,
+        "Record": 323
+      },
+      {
+        "y_IPMI-POWER": 432.0,
+        "Record": 2
+      },
+      {
+        "y_IPMI-POWER": null,
+        "Record": 7
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

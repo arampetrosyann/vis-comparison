@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-f28772258d704514a1d70f28fae2085a"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "LOSE-RATE (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 0.081577884681336
+      },
+      "field": "LOSE-RATE",
+      "scale": {
+        "domain": [
+          0.0,
+          0.81577884681336
+        ]
+      },
+      "title": "LOSE-RATE (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "LOSE-RATE_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-f28772258d704514a1d70f28fae2085a": [
+      {
+        "LOSE-RATE": 0.0,
+        "Number of Records": 26.0,
+        "LOSE-RATE_end": 0.09
+      },
+      {
+        "LOSE-RATE": 0.081577884681336,
+        "Number of Records": 5.0,
+        "LOSE-RATE_end": 0.171577884681336
+      },
+      {
+        "LOSE-RATE": 0.163155769362672,
+        "Number of Records": 5.0,
+        "LOSE-RATE_end": 0.25315576936267203
+      },
+      {
+        "LOSE-RATE": 0.24473365404400801,
+        "Number of Records": 4.0,
+        "LOSE-RATE_end": 0.334733654044008
+      },
+      {
+        "LOSE-RATE": 0.326311538725344,
+        "Number of Records": 4.0,
+        "LOSE-RATE_end": 0.416311538725344
+      },
+      {
+        "LOSE-RATE": 0.40788942340668,
+        "Number of Records": 6.0,
+        "LOSE-RATE_end": 0.49788942340667997
+      },
+      {
+        "LOSE-RATE": 0.48946730808801603,
+        "Number of Records": 7.0,
+        "LOSE-RATE_end": 0.579467308088016
+      },
+      {
+        "LOSE-RATE": 0.5710451927693521,
+        "Number of Records": 3.0,
+        "LOSE-RATE_end": 0.661045192769352
+      },
+      {
+        "LOSE-RATE": 0.652623077450688,
+        "Number of Records": 6.0,
+        "LOSE-RATE_end": 0.742623077450688
+      },
+      {
+        "LOSE-RATE": 0.734200962132024,
+        "Number of Records": 9.0,
+        "LOSE-RATE_end": 0.824200962132024
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

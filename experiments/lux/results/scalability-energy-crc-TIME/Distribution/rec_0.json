@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-aee0c1b4e3a91d06f70771fd40e9f49d"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "y_GPU-POWER (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 2.311
+      },
+      "field": "y_GPU-POWER",
+      "scale": {
+        "domain": [
+          26.72,
+          49.83
+        ]
+      },
+      "title": "y_GPU-POWER (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "y_GPU-POWER_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-aee0c1b4e3a91d06f70771fd40e9f49d": [
+      {
+        "y_GPU-POWER": 26.72,
+        "Number of Records": 2467.0,
+        "y_GPU-POWER_end": 29.15
+      },
+      {
+        "y_GPU-POWER": 29.031,
+        "Number of Records": 2978.0,
+        "y_GPU-POWER_end": 31.461
+      },
+      {
+        "y_GPU-POWER": 31.342,
+        "Number of Records": 11376.0,
+        "y_GPU-POWER_end": 33.772
+      },
+      {
+        "y_GPU-POWER": 33.653,
+        "Number of Records": 1834.0,
+        "y_GPU-POWER_end": 36.083
+      },
+      {
+        "y_GPU-POWER": 35.964,
+        "Number of Records": 2399.0,
+        "y_GPU-POWER_end": 38.394
+      },
+      {
+        "y_GPU-POWER": 38.275,
+        "Number of Records": 710.0,
+        "y_GPU-POWER_end": 40.705
+      },
+      {
+        "y_GPU-POWER": 40.586,
+        "Number of Records": 23.0,
+        "y_GPU-POWER_end": 43.016
+      },
+      {
+        "y_GPU-POWER": 42.897,
+        "Number of Records": 317.0,
+        "y_GPU-POWER_end": 45.327
+      },
+      {
+        "y_GPU-POWER": 45.208,
+        "Number of Records": 54.0,
+        "y_GPU-POWER_end": 47.638
+      },
+      {
+        "y_GPU-POWER": 47.519,
+        "Number of Records": 393.0,
+        "y_GPU-POWER_end": 49.949
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

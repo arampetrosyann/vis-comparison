@@ -2,8 +2,15 @@ import importlib.util
 from pathlib import Path
 import pkgutil
 import lux
+import json
 import pandas as pd
 import vl_convert as vlc
+
+lux.config.plotting_backend = "vegalite"
+lux.config.topk = 3
+lux.config.number_of_bars = 20
+lux.config.plotting_scale = 2
+lux.config.sort = "descending"
 
 if not hasattr(pkgutil, "find_loader"):
 	def _find_loader(name: str):
@@ -31,16 +38,16 @@ def run_lux(data_dir: str = "src/data"):
 			ldf = lux.LuxDataFrame(df)
 
 			# set intent
-			excluded_cols = {"index", "build", "test_index", "run_index"}
-			candidate_cols = [col for col in ldf.columns if col.lower() not in excluded_cols]
+			# excluded_cols = {"index", "build", "test_index", "run_index"}
+			# candidate_cols = [col for col in ldf.columns if col.lower() not in excluded_cols]
 
-			if (ldf.columns.str.startswith("y")).any():
-				y_cols = [col for col in candidate_cols if col.lower().startswith("y")]
-				other_cols = [col.title() for col in candidate_cols if col not in y_cols]
+			# if (ldf.columns.str.startswith("y")).any():
+			# 	y_cols = [col for col in candidate_cols if col.lower().startswith("y")]
+			# 	other_cols = [col.title() for col in candidate_cols if col not in y_cols]
 
-				ldf.intent = [other_cols] + [col.title() for col in y_cols]	
-			else:
-				ldf.intent = [col.title() for col in candidate_cols]
+			# 	ldf.intent = [other_cols] + [col.title() for col in y_cols]	
+			# else:
+			# 	ldf.intent = [col.title() for col in candidate_cols]
 
 			print("intent - ", ldf.intent, "\n")
 
@@ -58,10 +65,13 @@ def run_lux(data_dir: str = "src/data"):
 				action_dir = output_dir / action_name
 				action_dir.mkdir(parents=True, exist_ok=True)
 
-				for idx, vis in enumerate(list(vis_list)[:5]): # limit to top 5 recommendations per action
+				for idx, vis in enumerate(list(vis_list)[:3]): # limit to top 3 recommendations per action
 					try:
 						spec = vis.to_vegalite(prettyOutput=False)
 						chart_path = action_dir / f"rec_{idx}.png"
+
+						spec_path = action_dir / f"rec_{idx}.json" 
+						spec_path.write_text(json.dumps(spec, indent=2))  # save also vegalite spec for reference
 
 						png_data = vlc.vegalite_to_png(vl_spec=spec, scale=2)
 						chart_path.write_bytes(png_data)

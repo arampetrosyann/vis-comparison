@@ -1,0 +1,390 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "mark": {
+      "tooltip": {
+        "content": "encoding"
+      }
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-a0deeb7196e64b10b76592feb1dd20a7"
+  },
+  "mark": {
+    "type": "circle"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "LOSE-RATE"
+      },
+      "field": "LOSE-RATE",
+      "scale": {
+        "domain": [
+          0.0,
+          0.81577884681336
+        ]
+      },
+      "type": "quantitative"
+    },
+    "y": {
+      "axis": {
+        "title": "RX-RATE-MBPS"
+      },
+      "field": "RX-RATE-MBPS",
+      "scale": {
+        "domain": [
+          6334.2364064,
+          97324.5755168
+        ]
+      },
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "params": [
+    {
+      "name": "param_1e9efca18e7a2868",
+      "select": {
+        "type": "interval",
+        "encodings": [
+          "x",
+          "y"
+        ]
+      },
+      "bind": "scales"
+    }
+  ],
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-a0deeb7196e64b10b76592feb1dd20a7": [
+      {
+        "LOSE-RATE": 0.81468163796362,
+        "RX-RATE-MBPS": 6364.6310304
+      },
+      {
+        "LOSE-RATE": 0.81577884681336,
+        "RX-RATE-MBPS": 6334.2364064
+      },
+      {
+        "LOSE-RATE": 0.81410395972052,
+        "RX-RATE-MBPS": 6384.0341472
+      },
+      {
+        "LOSE-RATE": 0.815134828293,
+        "RX-RATE-MBPS": 11025.4070752
+      },
+      {
+        "LOSE-RATE": 0.81511824842222,
+        "RX-RATE-MBPS": 11026.9026848
+      },
+      {
+        "LOSE-RATE": 0.8152405545136,
+        "RX-RATE-MBPS": 11020.557296
+      },
+      {
+        "LOSE-RATE": 0.76900003237092,
+        "RX-RATE-MBPS": 20647.105632
+      },
+      {
+        "LOSE-RATE": 0.76726731157301,
+        "RX-RATE-MBPS": 20678.4747072
+      },
+      {
+        "LOSE-RATE": 0.76646992077737,
+        "RX-RATE-MBPS": 20678.9868512
+      },
+      {
+        "LOSE-RATE": 0.59606424351121,
+        "RX-RATE-MBPS": 39639.772736
+      },
+      {
+        "LOSE-RATE": 0.59578560912731,
+        "RX-RATE-MBPS": 39679.4267776
+      },
+      {
+        "LOSE-RATE": 0.59608686196476,
+        "RX-RATE-MBPS": 39653.7999712
+      },
+      {
+        "LOSE-RATE": 0.22428305460712,
+        "RX-RATE-MBPS": 76139.96152
+      },
+      {
+        "LOSE-RATE": 0.22655840747191,
+        "RX-RATE-MBPS": 75924.5450688
+      },
+      {
+        "LOSE-RATE": 0.22587263247631,
+        "RX-RATE-MBPS": 75989.4347232
+      },
+      {
+        "LOSE-RATE": 0.67036585299639,
+        "RX-RATE-MBPS": 11186.6864256
+      },
+      {
+        "LOSE-RATE": 0.67470712196311,
+        "RX-RATE-MBPS": 11051.315184
+      },
+      {
+        "LOSE-RATE": 0.6702921857815,
+        "RX-RATE-MBPS": 11192.5763808
+      },
+      {
+        "LOSE-RATE": 0.65827722259999,
+        "RX-RATE-MBPS": 19623.1055584
+      },
+      {
+        "LOSE-RATE": 0.65835638544212,
+        "RX-RATE-MBPS": 19669.3191136
+      },
+      {
+        "LOSE-RATE": 0.65760674414301,
+        "RX-RATE-MBPS": 19692.768384
+      },
+      {
+        "LOSE-RATE": 0.53891547605312,
+        "RX-RATE-MBPS": 36329.0252864
+      },
+      {
+        "LOSE-RATE": 0.53706188595489,
+        "RX-RATE-MBPS": 36364.052
+      },
+      {
+        "LOSE-RATE": 0.53552785654607,
+        "RX-RATE-MBPS": 36409.9075584
+      },
+      {
+        "LOSE-RATE": 0.12961086082874,
+        "RX-RATE-MBPS": 69623.0040576
+      },
+      {
+        "LOSE-RATE": 0.15723892191545,
+        "RX-RATE-MBPS": 69738.9435008
+      },
+      {
+        "LOSE-RATE": 0.15342686985758,
+        "RX-RATE-MBPS": 69608.784688
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 94365.2156288
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 94188.3312064
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 94279.7230304
+      },
+      {
+        "LOSE-RATE": 0.45473766520403,
+        "RX-RATE-MBPS": 18446.7804896
+      },
+      {
+        "LOSE-RATE": 0.42554721605797,
+        "RX-RATE-MBPS": 19240.7258016
+      },
+      {
+        "LOSE-RATE": 0.42837492204649,
+        "RX-RATE-MBPS": 19177.0398048
+      },
+      {
+        "LOSE-RATE": 0.32085719228905,
+        "RX-RATE-MBPS": 34354.3107296
+      },
+      {
+        "LOSE-RATE": 0.37360870595155,
+        "RX-RATE-MBPS": 32323.2111936
+      },
+      {
+        "LOSE-RATE": 0.31789516830003,
+        "RX-RATE-MBPS": 34455.6644512
+      },
+      {
+        "LOSE-RATE": 0.0076288798230371,
+        "RX-RATE-MBPS": 62126.685024
+      },
+      {
+        "LOSE-RATE": 0.019852215546482,
+        "RX-RATE-MBPS": 61697.8490784
+      },
+      {
+        "LOSE-RATE": 0.017205927016726,
+        "RX-RATE-MBPS": 61700.4879904
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 75678.3234752
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 77152.432928
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 75788.2770464
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 94801.4285472
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 94270.4878592
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 94860.097376
+      },
+      {
+        "LOSE-RATE": 0.50047926283402,
+        "RX-RATE-MBPS": 16899.5444192
+      },
+      {
+        "LOSE-RATE": 0.50139776675905,
+        "RX-RATE-MBPS": 16871.5548864
+      },
+      {
+        "LOSE-RATE": 0.46556192898879,
+        "RX-RATE-MBPS": 18001.6897952
+      },
+      {
+        "LOSE-RATE": 0.45594052563043,
+        "RX-RATE-MBPS": 25836.7188128
+      },
+      {
+        "LOSE-RATE": 0.39048850129796,
+        "RX-RATE-MBPS": 28592.6216032
+      },
+      {
+        "LOSE-RATE": 0.35079402989014,
+        "RX-RATE-MBPS": 30126.7163232
+      },
+      {
+        "LOSE-RATE": 0.17649481360292,
+        "RX-RATE-MBPS": 53434.7459872
+      },
+      {
+        "LOSE-RATE": 0.15007334527483,
+        "RX-RATE-MBPS": 54852.6623168
+      },
+      {
+        "LOSE-RATE": 0.24063791002673,
+        "RX-RATE-MBPS": 50107.6653408
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 78026.2002272
+      },
+      {
+        "LOSE-RATE": 6.6546403418632e-05,
+        "RX-RATE-MBPS": 78007.2249312
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 78361.8688
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 97001.9747264
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 97324.5755168
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 97287.1805088
+      },
+      {
+        "LOSE-RATE": 0.45874938156211,
+        "RX-RATE-MBPS": 18236.591616
+      },
+      {
+        "LOSE-RATE": 0.50276537657321,
+        "RX-RATE-MBPS": 16829.9311296
+      },
+      {
+        "LOSE-RATE": 0.49999395887506,
+        "RX-RATE-MBPS": 16922.222624
+      },
+      {
+        "LOSE-RATE": 0.30499122385881,
+        "RX-RATE-MBPS": 31507.1332352
+      },
+      {
+        "LOSE-RATE": 0.30501030260632,
+        "RX-RATE-MBPS": 31516.495904
+      },
+      {
+        "LOSE-RATE": 0.36321783809579,
+        "RX-RATE-MBPS": 29309.6184416
+      },
+      {
+        "LOSE-RATE": 0.020900709650032,
+        "RX-RATE-MBPS": 57262.4011968
+      },
+      {
+        "LOSE-RATE": 0.024399234187992,
+        "RX-RATE-MBPS": 57074.5928576
+      },
+      {
+        "LOSE-RATE": 0.13119268700421,
+        "RX-RATE-MBPS": 53608.6661376
+      },
+      {
+        "LOSE-RATE": 6.2646843888015e-06,
+        "RX-RATE-MBPS": 77990.1316064
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 77802.6027584
+      },
+      {
+        "LOSE-RATE": 2.6705322753173e-07,
+        "RX-RATE-MBPS": 78090.4313184
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 97266.867232
+      },
+      {
+        "LOSE-RATE": 0.0,
+        "RX-RATE-MBPS": 97280.1235552
+      },
+      {
+        "LOSE-RATE": 1.3953728817406e-05,
+        "RX-RATE-MBPS": 97322.0632352
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

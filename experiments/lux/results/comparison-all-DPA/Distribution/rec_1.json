@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-c6eb9bfb6dc9a4bc979877b96fdfe29d"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "y_GOODRATEPC (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 9.999340881921519
+      },
+      "field": "y_GOODRATEPC",
+      "scale": {
+        "domain": [
+          0.0063820121130042,
+          99.9997908313282
+        ]
+      },
+      "title": "y_GOODRATEPC (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "y_GOODRATEPC_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-c6eb9bfb6dc9a4bc979877b96fdfe29d": [
+      {
+        "y_GOODRATEPC": 0.0063820121130042,
+        "Number of Records": 235.0,
+        "y_GOODRATEPC_end": 10.506382012113004
+      },
+      {
+        "y_GOODRATEPC": 10.005722894034523,
+        "Number of Records": 30.0,
+        "y_GOODRATEPC_end": 20.505722894034523
+      },
+      {
+        "y_GOODRATEPC": 20.005063775956042,
+        "Number of Records": 19.0,
+        "y_GOODRATEPC_end": 30.505063775956042
+      },
+      {
+        "y_GOODRATEPC": 30.00440465787756,
+        "Number of Records": 4.0,
+        "y_GOODRATEPC_end": 40.50440465787756
+      },
+      {
+        "y_GOODRATEPC": 40.00374553979908,
+        "Number of Records": 5.0,
+        "y_GOODRATEPC_end": 50.50374553979908
+      },
+      {
+        "y_GOODRATEPC": 50.003086421720596,
+        "Number of Records": 8.0,
+        "y_GOODRATEPC_end": 60.503086421720596
+      },
+      {
+        "y_GOODRATEPC": 60.002427303642115,
+        "Number of Records": 3.0,
+        "y_GOODRATEPC_end": 70.50242730364212
+      },
+      {
+        "y_GOODRATEPC": 70.00176818556365,
+        "Number of Records": 10.0,
+        "y_GOODRATEPC_end": 80.50176818556365
+      },
+      {
+        "y_GOODRATEPC": 80.00110906748516,
+        "Number of Records": 4.0,
+        "y_GOODRATEPC_end": 90.50110906748516
+      },
+      {
+        "y_GOODRATEPC": 90.00044994940667,
+        "Number of Records": 42.0,
+        "y_GOODRATEPC_end": 100.50044994940667
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}

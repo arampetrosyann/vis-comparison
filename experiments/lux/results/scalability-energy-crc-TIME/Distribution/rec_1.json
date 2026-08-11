@@ -1,0 +1,121 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelColor": "#505050",
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 11,
+      "titleFontWeight": 500
+    },
+    "legend": {
+      "labelFont": "Helvetica Neue",
+      "labelFontSize": 9,
+      "labelFontWeight": 400,
+      "titleFont": "Helvetica Neue",
+      "titleFontSize": 10,
+      "titleFontWeight": 500
+    },
+    "title": {
+      "font": "Helvetica Neue",
+      "fontSize": 13,
+      "fontWeight": 500
+    }
+  },
+  "data": {
+    "name": "data-2f0d9ca3f40cc3edb5380f0780354971"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "axis": {
+        "title": "y_RAPL-POWER (binned)"
+      },
+      "bin": {
+        "binned": true,
+        "step": 5.4867402
+      },
+      "field": "y_RAPL-POWER",
+      "scale": {
+        "domain": [
+          70.627421,
+          125.494823
+        ]
+      },
+      "title": "y_RAPL-POWER (binned)",
+      "type": "quantitative"
+    },
+    "x2": {
+      "field": "y_RAPL-POWER_end"
+    },
+    "y": {
+      "field": "Number of Records",
+      "type": "quantitative"
+    }
+  },
+  "height": 300.0,
+  "width": 320.0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "datasets": {
+    "data-2f0d9ca3f40cc3edb5380f0780354971": [
+      {
+        "y_RAPL-POWER": 70.627421,
+        "Number of Records": 3238.0,
+        "y_RAPL-POWER_end": 76.387421
+      },
+      {
+        "y_RAPL-POWER": 76.1141612,
+        "Number of Records": 6959.0,
+        "y_RAPL-POWER_end": 81.8741612
+      },
+      {
+        "y_RAPL-POWER": 81.6009014,
+        "Number of Records": 2856.0,
+        "y_RAPL-POWER_end": 87.3609014
+      },
+      {
+        "y_RAPL-POWER": 87.0876416,
+        "Number of Records": 2614.0,
+        "y_RAPL-POWER_end": 92.8476416
+      },
+      {
+        "y_RAPL-POWER": 92.5743818,
+        "Number of Records": 4302.0,
+        "y_RAPL-POWER_end": 98.3343818
+      },
+      {
+        "y_RAPL-POWER": 98.061122,
+        "Number of Records": 1486.0,
+        "y_RAPL-POWER_end": 103.821122
+      },
+      {
+        "y_RAPL-POWER": 103.5478622,
+        "Number of Records": 342.0,
+        "y_RAPL-POWER_end": 109.3078622
+      },
+      {
+        "y_RAPL-POWER": 109.0346024,
+        "Number of Records": 584.0,
+        "y_RAPL-POWER_end": 114.7946024
+      },
+      {
+        "y_RAPL-POWER": 114.5213426,
+        "Number of Records": 108.0,
+        "y_RAPL-POWER_end": 120.2813426
+      },
+      {
+        "y_RAPL-POWER": 120.0080828,
+        "Number of Records": 36.0,
+        "y_RAPL-POWER_end": 125.7680828
+      }
+    ]
+  },
+  "vislib": "vegalite"
+}
