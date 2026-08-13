@@ -80,7 +80,7 @@ def run_lida(data_dir: str = "src/data", n_goals: int = 3, backend: str = "custo
 			goals = manager.goals(
 				summary,
 				n=n_goals,
-				persona="You are a data analyst focused on generating visualizations",
+				persona="You are a networking performance analyst focused on the relationships and correlations between dependent and independent variables.",
 				textgen_config=textgen_config,
 			)
 
@@ -88,7 +88,7 @@ def run_lida(data_dir: str = "src/data", n_goals: int = 3, backend: str = "custo
 				charts = manager.visualize(
 					summary=summary,
 					goal=goal,
-					library="seaborn",
+					library="matplotlib",
 					textgen_config=textgen_config,
 				)
 
